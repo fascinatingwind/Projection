@@ -90,10 +90,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="dllexport.h" />
+    <ClInclude Include="FLine.h" />
+    <ClInclude Include="FPoint.h" />
+    <ClInclude Include="NumericComparer.h" />
     <ClInclude Include="precompiled.h" />
     <ClInclude Include="TPoint.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="FLine.cpp" />
+    <ClCompile Include="FPoint.cpp" />
+    <ClCompile Include="NumericComparer.cpp" />
     <ClCompile Include="TPoint.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
