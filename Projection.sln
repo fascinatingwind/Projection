@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Projection", "Projection\Projection.vcxproj", "{094C087C-EEB9-4146-9AA1-B0D13D6F9DDC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpaceX", "SpaceX\SpaceX.vcxproj", "{798F3EF7-2800-4CFF-952F-EBFBA12A8876}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{094C087C-EEB9-4146-9AA1-B0D13D6F9DDC}.Debug|x64.ActiveCfg = Debug|x64
+		{094C087C-EEB9-4146-9AA1-B0D13D6F9DDC}.Debug|x64.Build.0 = Debug|x64
+		{094C087C-EEB9-4146-9AA1-B0D13D6F9DDC}.Release|x64.ActiveCfg = Release|x64
+		{094C087C-EEB9-4146-9AA1-B0D13D6F9DDC}.Release|x64.Build.0 = Release|x64
+		{798F3EF7-2800-4CFF-952F-EBFBA12A8876}.Debug|x64.ActiveCfg = Debug|x64
+		{798F3EF7-2800-4CFF-952F-EBFBA12A8876}.Debug|x64.Build.0 = Debug|x64
+		{798F3EF7-2800-4CFF-952F-EBFBA12A8876}.Release|x64.ActiveCfg = Release|x64
+		{798F3EF7-2800-4CFF-952F-EBFBA12A8876}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {32C12D83-A36F-4F54-9938-DA79CE882E71}
+	EndGlobalSection
+EndGlobal
