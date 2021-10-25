@@ -34,5 +34,9 @@ namespace Projection
 			}
 			in_stream.close();
 		}
+		else
+		{
+			std::cerr << "Can't open file name : " << m_file_name << std::endl;
+		}
 	}
 }
