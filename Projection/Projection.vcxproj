@@ -91,10 +91,12 @@
   <ItemGroup>
     <ClCompile Include="FileReader.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="StringConverter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FileReader.h" />
     <ClInclude Include="precompiled.h" />
+    <ClInclude Include="StringConverter.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SpaceX\SpaceX.vcxproj">
