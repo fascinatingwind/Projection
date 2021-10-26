@@ -49,7 +49,7 @@ namespace SpaceX
 			m_array[row] = point.GetArray();
 		}
 
-		SetColumn(const TPoint3D<T>& point, size_t column)
+		void SetColumn(const TPoint3D<T>& point, size_t column)
 		{
 			if (column >= m_dimension || column < 0)
 				return;
@@ -63,7 +63,7 @@ namespace SpaceX
 		}
 
 	private:
-		constexpr size_t m_dimension = 3;
+		constexpr static size_t m_dimension = 3;
 		std::array<std::array<T, m_dimension>, m_dimension> m_array;
 	};
 }
