@@ -15,29 +15,29 @@ namespace SpaceX
 		T Determinant() const
 		{
 			T sum = 0;
-			
+
 			// calc main diag
-			for (int j = 0; j < m_dimension; j++)
+			for (int shift = 0; shift < m_dimension; shift++)
 			{
 				T multiply = 1;
-				for (int i = 0; i < m_dimension; i++)
+				for (int col = 0; col < m_dimension; col++)
 				{
-					multiply *= m_array[i][(i + j) % m_dimension];
+					multiply *= m_array[col][(col + shift) % m_dimension];
 				}
 				sum += multiply;
 			}
-			
+
 			// calc second diag
-			for (int j = m_dimension - 1; j >= 0; --j)
+			for (int shift = 0; shift < m_dimension; shift++)
 			{
 				T multiply = 1;
-				for (int i = 0; i < m_dimension; i++)
+				for (int col = 0; col < m_dimension; col++)
 				{
-					multiply *= m_array[(i + j) % m_dimension][i];
+					multiply *= m_array[m_dimension - col - 1][(col + shift) % m_dimension];
 				}
 				sum -= multiply;
 			}
-			
+
 			return sum;
 		}
 
