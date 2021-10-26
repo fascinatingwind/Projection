@@ -13,11 +13,6 @@ namespace SpaceX
 		return m_points.back() - m_points.front();
 	}
 	
-	FPoint3D FLine3D::GetUpperPoint() const
-	{
-		return -m_points.front();
-	}
-
 	FPoint3D FLine3D::GetStartPoint() const
 	{
 		return m_points.front();
