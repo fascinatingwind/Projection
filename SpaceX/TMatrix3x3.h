@@ -62,7 +62,7 @@ namespace SpaceX
 			}
 		}
 
-	private:
+	protected:
 		constexpr static size_t m_dimension = 3;
 		std::array<std::array<T, m_dimension>, m_dimension> m_array;
 	};
