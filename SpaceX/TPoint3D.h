@@ -14,25 +14,6 @@ namespace SpaceX
 
 		explicit TPoint3D(T x, T y, T z) : m_x (x), m_y(y), m_z(z){}
 
-		TPoint3D& operator+=(const TPoint3D& other)
-		{
-			m_x += other.m_x;
-			m_y += other.m_y;
-			m_z += other.m_z;
-			
-			return this;
-		}
-
-		TPoint3D operator+(const TPoint3D& other) const
-		{
-			return { m_x + other.m_x, m_y + other.m_y, m_z + other.m_z };
-		}
-
-		TPoint3D operator-() const
-		{
-			return { -m_x, -m_y, -m_z };
-		}
-
 		std::array<T, 3> GetArray() const
 		{
 			return { m_x, m_y, m_z };
