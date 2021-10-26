@@ -13,6 +13,6 @@ namespace SpaceX
 
 		explicit FPoint3D(float x, float y, float z);
 
-		bool operator==(const FPoint3D& other);
+		bool operator==(const FPoint3D& other) const;
 	};
 }

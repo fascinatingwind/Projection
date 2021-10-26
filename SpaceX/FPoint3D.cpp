@@ -9,7 +9,7 @@ namespace SpaceX
 	{
 	}
 
-	bool FPoint3D::operator==(const FPoint3D& other)
+	bool FPoint3D::operator==(const FPoint3D& other) const
 	{
 		return NumericComparer::IsEqual(m_x, other.m_x)
 			&& NumericComparer::IsEqual(m_y, other.m_y)
