@@ -1,7 +1,7 @@
 #pragma once
 #include "dllexport.h"
 
-#include "FPoint.h"
+#include "FPoint3D.h"
 
 namespace SpaceX
 {
@@ -11,9 +11,9 @@ namespace SpaceX
 		FLine() = default;
 		~FLine() = default;
 
-		void AppendPoint(const FPoint& point);
+		void AppendPoint(const FPoint3D& point);
 
 	protected:
-		std::vector<FPoint> m_points;
+		std::vector<FPoint3D> m_points;
 	};
 }

@@ -91,16 +91,18 @@
   <ItemGroup>
     <ClInclude Include="dllexport.h" />
     <ClInclude Include="FLine.h" />
-    <ClInclude Include="FPoint.h" />
+    <ClInclude Include="FPoint3D.h" />
+    <ClInclude Include="TMatrix3x3.h" />
     <ClInclude Include="NumericComparer.h" />
     <ClInclude Include="precompiled.h" />
-    <ClInclude Include="TPoint.h" />
+    <ClInclude Include="TPoint3D.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FLine.cpp" />
-    <ClCompile Include="FPoint.cpp" />
+    <ClCompile Include="FPoint3D.cpp" />
+    <ClCompile Include="TMatrix3x3.cpp" />
     <ClCompile Include="NumericComparer.cpp" />
-    <ClCompile Include="TPoint.cpp" />
+    <ClCompile Include="TPoint3D.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

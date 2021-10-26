@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClInclude Include="TPoint.h">
-      <Filter>Types</Filter>
-    </ClInclude>
     <ClInclude Include="NumericComparer.h">
       <Filter>Helpers</Filter>
     </ClInclude>
@@ -13,11 +10,17 @@
     <ClInclude Include="dllexport.h">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="FPoint.h">
+    <ClInclude Include="FPoint3D.h">
       <Filter>Types</Filter>
     </ClInclude>
     <ClInclude Include="FLine.h">
       <Filter>Types</Filter>
+    </ClInclude>
+    <ClInclude Include="TPoint3D.h">
+      <Filter>Types\Templates</Filter>
+    </ClInclude>
+    <ClInclude Include="TMatrix3x3.h">
+      <Filter>Types\Templates</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -30,19 +33,25 @@
     <Filter Include="Headers">
       <UniqueIdentifier>{c5189321-97d9-4ee7-9123-ca300a93766e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Types\Templates">
+      <UniqueIdentifier>{3b44bbe1-8275-4e82-928d-fed71e7be1a5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TPoint.cpp">
-      <Filter>Types</Filter>
-    </ClCompile>
     <ClCompile Include="NumericComparer.cpp">
       <Filter>Helpers</Filter>
     </ClCompile>
-    <ClCompile Include="FPoint.cpp">
+    <ClCompile Include="FPoint3D.cpp">
       <Filter>Types</Filter>
     </ClCompile>
     <ClCompile Include="FLine.cpp">
       <Filter>Types</Filter>
+    </ClCompile>
+    <ClCompile Include="TPoint3D.cpp">
+      <Filter>Types\Templates</Filter>
+    </ClCompile>
+    <ClCompile Include="TMatrix3x3.cpp">
+      <Filter>Types\Templates</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
