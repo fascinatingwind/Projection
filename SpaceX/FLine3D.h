@@ -25,11 +25,11 @@ namespace SpaceX
 		// x2 - x1  y2 - y1  z2 - z1
 		FPoint3D GetUpperPoint() const;
 
+		FPoint3D GetStartPoint() const;
+		FPoint3D GetEndPoint() const;
+
 	protected:
 		constexpr static size_t size = 2;
 		std::array<FPoint3D, size> m_points;
-
-	private:
-		void InsertPoint(const FPoint3D& point, size_t pos);
 	};
 }
