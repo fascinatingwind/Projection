@@ -4,6 +4,16 @@
 
 namespace SpaceX
 {
+    FMatrix3x3::FMatrix3x3(
+        const FPoint3D& row0, 
+        const FPoint3D& row1, 
+        const FPoint3D& row2)
+    {
+        m_array[0] = row0.GetArray();
+        m_array[1] = row1.GetArray();
+        m_array[2] = row2.GetArray();
+    }
+
     bool FMatrix3x3::operator==(const FMatrix3x3& other) const
     {
         for (int row = 0; row < m_dimension; row++)
