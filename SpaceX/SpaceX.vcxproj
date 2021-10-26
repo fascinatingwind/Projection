@@ -91,6 +91,7 @@
   <ItemGroup>
     <ClInclude Include="dllexport.h" />
     <ClInclude Include="FLine.h" />
+    <ClInclude Include="FMatrix3x3.h" />
     <ClInclude Include="FPoint3D.h" />
     <ClInclude Include="TMatrix3x3.h" />
     <ClInclude Include="NumericComparer.h" />
@@ -99,6 +100,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FLine.cpp" />
+    <ClCompile Include="FMatrix3x3.cpp" />
     <ClCompile Include="FPoint3D.cpp" />
     <ClCompile Include="TMatrix3x3.cpp" />
     <ClCompile Include="NumericComparer.cpp" />

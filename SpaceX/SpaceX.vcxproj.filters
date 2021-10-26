@@ -22,6 +22,9 @@
     <ClInclude Include="TMatrix3x3.h">
       <Filter>Types\Templates</Filter>
     </ClInclude>
+    <ClInclude Include="FMatrix3x3.h">
+      <Filter>Types</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Types">
@@ -52,6 +55,9 @@
     </ClCompile>
     <ClCompile Include="TMatrix3x3.cpp">
       <Filter>Types\Templates</Filter>
+    </ClCompile>
+    <ClCompile Include="FMatrix3x3.cpp">
+      <Filter>Types</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
