@@ -15,4 +15,26 @@ namespace SpaceX
 			&& NumericComparer::IsEqual(m_y, other.m_y)
 			&& NumericComparer::IsEqual(m_y, other.m_y);
 	}
+	FPoint3D& FPoint3D::operator+=(const FPoint3D& other)
+	{
+		m_x += other.m_x;
+		m_y += other.m_y;
+		m_z += other.m_z;
+
+		return *this;
+	}
+
+	FPoint3D FPoint3D::operator+(const FPoint3D& other) const
+	{
+		return FPoint3D(m_x + other.m_x, m_y + other.m_y, m_z + other.m_z);
+	}
+	FPoint3D FPoint3D::operator-(const FPoint3D& other) const
+	{
+		return FPoint3D(m_x - other.m_x, m_y - other.m_y, m_z - other.m_z);
+	}
+
+	FPoint3D FPoint3D::operator-() const
+	{
+		return FPoint3D(-m_x, -m_y, -m_z);
+	}
 }
