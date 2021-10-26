@@ -1,7 +1,7 @@
 #pragma once
 #include "dllexport.h"
 
-#include "TPoint.h"
+#include "TPoint3D.h"
 
 namespace SpaceX
 {
