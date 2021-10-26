@@ -50,12 +50,6 @@
     <ClCompile Include="FLine.cpp">
       <Filter>Types</Filter>
     </ClCompile>
-    <ClCompile Include="TPoint3D.cpp">
-      <Filter>Types\Templates</Filter>
-    </ClCompile>
-    <ClCompile Include="TMatrix3x3.cpp">
-      <Filter>Types\Templates</Filter>
-    </ClCompile>
     <ClCompile Include="FMatrix3x3.cpp">
       <Filter>Types</Filter>
     </ClCompile>
