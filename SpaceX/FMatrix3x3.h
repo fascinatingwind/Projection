@@ -10,5 +10,7 @@ namespace SpaceX
 	public:
 		FMatrix3x3() = default;
 		~FMatrix3x3() = default;
+
+		bool operator==(const FMatrix3x3& other) const;
 	};
 }
