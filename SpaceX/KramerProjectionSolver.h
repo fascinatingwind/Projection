@@ -1,10 +1,12 @@
 #pragma once
 
+#include "dllexport.h"
+
 #include "IProjectionPoint3D.h"
 
 namespace SpaceX
 {
-	class KramerProjectionSolver final : public IProjectionPoint3D
+	class SpaceX_ExportDll KramerProjectionSolver final : public IProjectionPoint3D
 	{
 	public:
 		KramerProjectionSolver() = default;
