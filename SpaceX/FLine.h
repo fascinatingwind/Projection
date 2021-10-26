@@ -11,9 +11,22 @@ namespace SpaceX
 		FLine() = default;
 		~FLine() = default;
 
-		void AppendPoint(const FPoint3D& point);
+		void InsertPoint(const FPoint3D& point, size_t pos);
+		
+		// return (x2-x1, y2 - y1, z2 - z1) from canonical equation
+		// x - x1   y - y1   z - z1
+		// ------ = ------ = -------
+		// x2 - x1  y2 - y1  z2 - z1
+		FPoint3D GetNormal() const;
+
+		// return (-x1, -y1, -z1) from canonical equation
+		// x - x1   y - y1   z - z1
+		// ------ = ------ = -------
+		// x2 - x1  y2 - y1  z2 - z1
+		FPoint3D GetUpperPoint() const;
 
 	protected:
-		std::vector<FPoint3D> m_points;
+		constexpr static size_t size = 2;
+		std::array<FPoint3D, size> m_points;
 	};
 }
