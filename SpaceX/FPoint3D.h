@@ -5,7 +5,7 @@
 
 namespace SpaceX
 {
-	class SpaceX_ExportDll FPoint3D : public TPoint3D<float>
+	struct SpaceX_ExportDll FPoint3D : public TPoint3D<float>
 	{
 	public:
 		FPoint3D() = default;
