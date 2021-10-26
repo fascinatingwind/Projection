@@ -20,11 +20,16 @@ int main(int argc, char* argv[])
 	}
 
 	const auto file_name = GetString(argv[1]);
-	const auto point = GetString(argv[2]);
+
+	std::vector<std::string> point_values;
+	for (int i = 2; i < argc; i++) {
+		point_values.push_back(GetString(argv[i]));
+	}
+
 	FileReader reader(file_name);
 	const auto lines = reader.GetLines();
-	
-	const auto point_value = StringConverter::ConvertTo(point);
+
+	const auto point_coord = StringConverter::ConvertAll(point_values);
 	const auto values = StringConverter::ConvertAll(lines);
 
 	return EXIT_SUCCESS;
