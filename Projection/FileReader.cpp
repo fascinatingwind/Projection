@@ -3,6 +3,8 @@
 #include <fstream>
 #include <iostream>
 
+#include "StringSplitter.h"
+
 namespace Projection
 {
 	FileReader::FileReader(std::string name)
@@ -30,7 +32,10 @@ namespace Projection
 			std::string line;
 			while (std::getline(in_stream, line))
 			{
-				m_lines.push_back(line);
+				for (const auto& item : StringSplitter::Split(line))
+				{
+					m_lines.push_back(item);
+				}
 			}
 			in_stream.close();
 		}
