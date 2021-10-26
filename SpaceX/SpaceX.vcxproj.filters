@@ -31,6 +31,9 @@
     <ClInclude Include="KramerProjectionSolver.h">
       <Filter>Algorithms</Filter>
     </ClInclude>
+    <ClInclude Include="LambdaParameter.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Types">
@@ -69,6 +72,9 @@
       <Filter>Algorithms\Interfaces</Filter>
     </ClCompile>
     <ClCompile Include="KramerProjectionSolver.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="LambdaParameter.cpp">
       <Filter>Algorithms</Filter>
     </ClCompile>
   </ItemGroup>

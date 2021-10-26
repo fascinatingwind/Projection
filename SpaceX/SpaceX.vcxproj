@@ -95,6 +95,7 @@
     <ClInclude Include="FPoint3D.h" />
     <ClInclude Include="IProjectionPoint3D.h" />
     <ClInclude Include="KramerProjectionSolver.h" />
+    <ClInclude Include="LambdaParameter.h" />
     <ClInclude Include="TMatrix3x3.h" />
     <ClInclude Include="NumericComparer.h" />
     <ClInclude Include="precompiled.h" />
@@ -105,6 +106,7 @@
     <ClCompile Include="FMatrix3x3.cpp" />
     <ClCompile Include="FPoint3D.cpp" />
     <ClCompile Include="KramerProjectionSolver.cpp" />
+    <ClCompile Include="LambdaParameter.cpp" />
     <ClCompile Include="NumericComparer.cpp" />
     <ClCompile Include="IProjectionPoint3D.cpp" />
   </ItemGroup>
