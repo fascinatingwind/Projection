@@ -2,8 +2,8 @@
 
 ## For find projection of point C to a line AB (points A,B) need:
 create matrix and point
+
 ![Formula matrix M and point P](./MatrixM.svg)
-<img src="./MatrixM.svg">
 
 found det of M
 replace 1st column of M to point from P found det of Mx
@@ -16,4 +16,3 @@ projection point will be
 ## Found a parameter
 
 ![Formula parameter](./Lambda.svg)
-<img src="./Lambda.svg">
