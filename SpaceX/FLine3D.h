@@ -5,11 +5,11 @@
 
 namespace SpaceX
 {
-	class SpaceX_ExportDll FLine
+	class SpaceX_ExportDll FLine3D
 	{
 	public:
-		FLine() = default;
-		~FLine() = default;
+		FLine3D() = default;
+		~FLine3D() = default;
 
 		void InsertPoint(const FPoint3D& point, size_t pos);
 		

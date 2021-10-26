@@ -1,8 +1,8 @@
-#include "FLine.h"
+#include "FLine3D.h"
 
 namespace SpaceX
 {
-	void FLine::InsertPoint(const FPoint3D& point, size_t pos)
+	void FLine3D::InsertPoint(const FPoint3D& point, size_t pos)
 	{
 		if (pos < 0 || pos > size)
 			return;
@@ -10,12 +10,12 @@ namespace SpaceX
 		m_points[pos] = point;
 	}
 	
-	FPoint3D FLine::GetNormal() const
+	FPoint3D FLine3D::GetNormal() const
 	{
 		return m_points[1] - m_points[0];
 	}
 	
-	FPoint3D FLine::GetUpperPoint() const
+	FPoint3D FLine3D::GetUpperPoint() const
 	{
 		return -m_points[0];
 	}

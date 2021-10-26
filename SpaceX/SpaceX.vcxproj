@@ -90,19 +90,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="dllexport.h" />
-    <ClInclude Include="FLine.h" />
+    <ClInclude Include="FLine3D.h" />
     <ClInclude Include="FMatrix3x3.h" />
     <ClInclude Include="FPoint3D.h" />
+    <ClInclude Include="IProjectionPoint3D.h" />
+    <ClInclude Include="KramerProjectionSolver.h" />
     <ClInclude Include="TMatrix3x3.h" />
     <ClInclude Include="NumericComparer.h" />
     <ClInclude Include="precompiled.h" />
     <ClInclude Include="TPoint3D.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="FLine.cpp" />
+    <ClCompile Include="FLine3D.cpp" />
     <ClCompile Include="FMatrix3x3.cpp" />
     <ClCompile Include="FPoint3D.cpp" />
+    <ClCompile Include="KramerProjectionSolver.cpp" />
     <ClCompile Include="NumericComparer.cpp" />
+    <ClCompile Include="IProjectionPoint3D.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
