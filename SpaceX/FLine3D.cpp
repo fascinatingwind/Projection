@@ -2,6 +2,12 @@
 
 namespace SpaceX
 {
+	FLine3D::FLine3D(const FPoint3D& point1, const FPoint3D& point2)
+	{
+		InsertPoint(point1, 0);
+		InsertPoint(point2, 1);
+	}
+
 	void FLine3D::InsertPoint(const FPoint3D& point, size_t pos)
 	{
 		if (pos < 0 || pos > size)

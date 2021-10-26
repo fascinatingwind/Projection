@@ -10,8 +10,8 @@ namespace SpaceX
 	public:
 		FLine3D() = default;
 		~FLine3D() = default;
-
-		void InsertPoint(const FPoint3D& point, size_t pos);
+		
+		FLine3D(const FPoint3D& point1, const FPoint3D& point2);
 		
 		// return (x2-x1, y2 - y1, z2 - z1) from canonical equation
 		// x - x1   y - y1   z - z1
@@ -28,5 +28,8 @@ namespace SpaceX
 	protected:
 		constexpr static size_t size = 2;
 		std::array<FPoint3D, size> m_points;
+
+	private:
+		void InsertPoint(const FPoint3D& point, size_t pos);
 	};
 }
