@@ -17,7 +17,7 @@ namespace Projection
 	{
 		return m_lines;
 	}
-	
+
 	void FileReader::Read()
 	{
 		std::ifstream in_stream(m_file_name);
@@ -26,10 +26,7 @@ namespace Projection
 			std::string line;
 			while (std::getline(in_stream, line))
 			{
-				for (const auto& item : StringSplitter::Split(line))
-				{
-					m_lines.push_back(item);
-				}
+				m_lines.push_back(line);
 			}
 			in_stream.close();
 		}
