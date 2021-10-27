@@ -1,11 +1,11 @@
 ## For find projection of point C to a line AB (points A,B) need:
 
 Create matrix representation of line
-![Formula matrix M](.svg/MatrixRepresentationOfLine.svg)
+![Matrix representation of line ](svg/MatrixRepresentationOfLine.svg)
 
 Create matrix and point\
 Our System of linear equation look like (M) = (P)
-![Formula matrix M](.svg/SLE.svg)
+![Formula matrix M](svg/SLE.svg)
 
 found det of M\
 replace 1st column of M to point from P found det of Mx\
@@ -17,4 +17,4 @@ projection point will be \
 
 ## Found a lambda parameter
 
-![Formula parameter](.svg/Lambda.svg)
+![Formula parameter](svg/Lambda.svg)
