@@ -19,7 +19,7 @@ namespace SpaceX
 		const FPoint3D pointP(
 			pointA.X * normal.Y - pointA.Y * normal.X,
 			pointA.X * normal.Z - pointA.Z * normal.X,
-			point.X * revert.X + point.Y * revert.Y + point.Z * revert.Z
+			point.X * normal.X + point.Y * normal.Y + point.Z * normal.Z
 		);
 
 		const auto detM = matrixM.Determinant();
