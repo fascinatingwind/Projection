@@ -96,6 +96,7 @@
     <ClInclude Include="IProjectionPoint3D.h" />
     <ClInclude Include="KramerProjectionSolver.h" />
     <ClInclude Include="LambdaParameter.h" />
+    <ClInclude Include="RepresentationHelper.h" />
     <ClInclude Include="TMatrix3x3.h" />
     <ClInclude Include="NumericComparer.h" />
     <ClInclude Include="precompiled.h" />
@@ -109,6 +110,7 @@
     <ClCompile Include="LambdaParameter.cpp" />
     <ClCompile Include="NumericComparer.cpp" />
     <ClCompile Include="IProjectionPoint3D.cpp" />
+    <ClCompile Include="RepresentationHelper.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

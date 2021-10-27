@@ -34,6 +34,9 @@
     <ClInclude Include="LambdaParameter.h">
       <Filter>Algorithms</Filter>
     </ClInclude>
+    <ClInclude Include="RepresentationHelper.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Types">
@@ -76,6 +79,9 @@
     </ClCompile>
     <ClCompile Include="LambdaParameter.cpp">
       <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="RepresentationHelper.cpp">
+      <Filter>Helpers</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
