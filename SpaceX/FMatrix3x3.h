@@ -17,5 +17,13 @@ namespace SpaceX
 			const FPoint3D& row2);
 
 		bool operator==(const FMatrix3x3& other) const;
+
+		bool IsZeroRow(size_t row) const;
+		
+		// no need to right now
+		bool IsZeroColumn(size_t column) const;
+
+
+		FPoint3D GetRow(size_t row) const;
 	};
 }
