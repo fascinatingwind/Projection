@@ -12,6 +12,7 @@ namespace SpaceX
 		TMatrix3x3() = default;
 		~TMatrix3x3() = default;
 
+		// Should it move to derived type class?
 		T Determinant() const
 		{
 			T sum = 0;
@@ -60,6 +61,11 @@ namespace SpaceX
 			{
 				m_array[i][column] = point_array[i];
 			}
+		}
+
+		static size_t GetDimension() 
+		{
+			return m_dimension;
 		}
 
 	protected:

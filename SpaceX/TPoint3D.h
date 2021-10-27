@@ -8,6 +8,7 @@ namespace SpaceX
 	template<class T>
 	struct SpaceX_ExportDll TPoint3D
 	{
+		// Should it store in array?
 		T X;
 		T Y;
 		T Z;
