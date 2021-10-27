@@ -17,8 +17,8 @@ namespace SpaceX
 			FPoint3D(normal.X, normal.Y, normal.Z));
 
 		const FPoint3D pointP(
-			pointA.X * normal.Y + pointA.Y * normal.X,
-			pointA.X * normal.Z + pointA.Z * normal.X,
+			pointA.X * normal.Y - pointA.Y * normal.X,
+			pointA.X * normal.Z - pointA.Z * normal.X,
 			point.X * revert.X + point.Y * revert.Y + point.Z * revert.Z
 		);
 
