@@ -3,6 +3,8 @@
 Create matrix representation of line
 ![Matrix representation of line ](svg/MatrixRepresentationOfLine.svg)
 
+Take 2 non zero rows\
+
 Create matrix and point\
 Our System of linear equation look like (M) = (P)
 ![Formula matrix M](svg/SLE.svg)
