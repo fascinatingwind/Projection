@@ -1,19 +1,24 @@
 #include "KramerProjectionSolver.h"
 #include "FMatrix3x3.h"
+#include "RepresentationHelper.h"
 
 namespace SpaceX
 {
 	FPoint3D KramerProjectionSolver::CalculateProjection(const FLine3D& line,
 		const FPoint3D& point)
 	{
+		const auto matrix_representation = RepresentationHelper::GetMatrixRepresentation(line);
+		
+		// Get part of SLE
+		// if lineAsPlanes have zero row
+		const auto lineAsPlanes = RepresentationHelper::Get2NonZeroRows(matrix_representation);
+		
 		const auto normal = line.GetNormal();
 		const auto pointA = line.GetStartPoint();
-		const auto pointB = line.GetEndPoint();
-		const auto revert = pointA - pointB;
 
 		const FMatrix3x3 matrixM(
-			FPoint3D(normal.Y, revert.X, 0),
-			FPoint3D(normal.Z, 0, revert.X),
+			lineAsPlanes.front(),
+			lineAsPlanes.back(),
 			FPoint3D(normal.X, normal.Y, normal.Z));
 
 		const FPoint3D pointP(

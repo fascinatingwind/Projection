@@ -65,7 +65,7 @@ TEST_F(KramerProjectionSolverTest, Should_return_projection_point_from_line_0_2_
 	KramerProjectionSolver solver;
 	const auto projection_point = solver.CalculateProjection(
 		FLine3D(FPoint3D(2, 0, 0), FPoint3D(2, 2, 0)), FPoint3D(3, 3, 3));
-	ASSERT_EQ(FPoint3D(2, 2, 0), projection_point);
+	ASSERT_EQ(FPoint3D(2, 3, 0), projection_point);
 }
 
 TEST_F(KramerProjectionSolverTest, Should_return_projection_point_from_line_2_2_0__0_2_0_and_point_3_3_3)
@@ -73,5 +73,5 @@ TEST_F(KramerProjectionSolverTest, Should_return_projection_point_from_line_2_2_
 	KramerProjectionSolver solver;
 	const auto projection_point = solver.CalculateProjection(
 		FLine3D(FPoint3D(2, 2, 0), FPoint3D(0, 2, 0)), FPoint3D(3, 3, 3));
-	ASSERT_EQ(FPoint3D(2, 2, 0), projection_point);
+	ASSERT_EQ(FPoint3D(3, 2, 0), projection_point);
 }
