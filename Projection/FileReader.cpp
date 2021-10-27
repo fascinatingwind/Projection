@@ -12,12 +12,6 @@ namespace Projection
 	{
 		Read();
 	}
-	
-	void FileReader::ReadFile(const std::string& file)
-	{
-		m_file_name = file;
-		Read();
-	}
 
 	std::vector<std::string> FileReader::GetLines() const
 	{

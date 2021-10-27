@@ -10,8 +10,6 @@ namespace Projection
 		
 		explicit FileReader(std::string name);
 		
-		void ReadFile(const std::string& file);
-		
 		std::vector<std::string> GetLines() const;
 	
 	private:
