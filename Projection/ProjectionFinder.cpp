@@ -47,7 +47,8 @@ namespace Projection
             if (is_out_of_bound)
             {
                 // take bound point of section
-                solutions.emplace_back(solution.m_lambda_parameter > 1 ? poly_line[i] : poly_line[i-1]);
+                solution.m_projection = solution.m_lambda_parameter > 1 ? poly_line[i] : poly_line[i - 1];
+                solutions.emplace_back(solution);
             }
             else if (solution.m_lambda_parameter >= 0 && solution.m_lambda_parameter <= 1)
             {
