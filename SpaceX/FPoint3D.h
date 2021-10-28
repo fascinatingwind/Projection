@@ -5,7 +5,7 @@
 
 namespace SpaceX
 {
-	class SpaceX_ExportDll FPoint3D : public TPoint3D<float>
+	struct SpaceX_ExportDll FPoint3D : public TPoint3D<float>
 	{
 	public:
 		FPoint3D() = default;
@@ -13,6 +13,18 @@ namespace SpaceX
 
 		explicit FPoint3D(float x, float y, float z);
 
-		bool operator==(const FPoint3D& other);
+		bool operator==(const FPoint3D& other) const;
+
+		FPoint3D& operator+=(const FPoint3D& other);
+
+		FPoint3D operator+(const FPoint3D& other) const;
+
+		FPoint3D operator-(const FPoint3D& other) const;
+		
+		FPoint3D operator-() const;
+		
+		FPoint3D operator*(const FPoint3D& other) const;
+
+		float Sum() const;
 	};
 }

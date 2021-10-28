@@ -3,6 +3,8 @@
 #include <fstream>
 #include <iostream>
 
+#include "StringSplitter.h"
+
 namespace Projection
 {
 	FileReader::FileReader(std::string name)
@@ -10,18 +12,12 @@ namespace Projection
 	{
 		Read();
 	}
-	
-	void FileReader::ReadFile(const std::string& file)
-	{
-		m_file_name = file;
-		Read();
-	}
 
 	std::vector<std::string> FileReader::GetLines() const
 	{
 		return m_lines;
 	}
-	
+
 	void FileReader::Read()
 	{
 		std::ifstream in_stream(m_file_name);

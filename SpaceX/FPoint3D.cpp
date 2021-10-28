@@ -9,10 +9,42 @@ namespace SpaceX
 	{
 	}
 
-	bool FPoint3D::operator==(const FPoint3D& other)
+	bool FPoint3D::operator==(const FPoint3D& other) const
 	{
-		return NumericComparer::IsEqual(m_x, other.m_x)
-			&& NumericComparer::IsEqual(m_y, other.m_y)
-			&& NumericComparer::IsEqual(m_y, other.m_y);
+		return NumericComparer::IsEqual(X, other.X)
+			&& NumericComparer::IsEqual(Y, other.Y)
+			&& NumericComparer::IsEqual(Y, other.Y);
+	}
+	FPoint3D& FPoint3D::operator+=(const FPoint3D& other)
+	{
+		X += other.X;
+		Y += other.Y;
+		Z += other.Z;
+
+		return *this;
+	}
+
+	FPoint3D FPoint3D::operator+(const FPoint3D& other) const
+	{
+		return FPoint3D(X + other.X, Y + other.Y, Z + other.Z);
+	}
+	FPoint3D FPoint3D::operator-(const FPoint3D& other) const
+	{
+		return FPoint3D(X - other.X, Y - other.Y, Z - other.Z);
+	}
+
+	FPoint3D FPoint3D::operator-() const
+	{
+		return FPoint3D(-X, -Y, -Z);
+	}
+
+	FPoint3D FPoint3D::operator*(const FPoint3D& other) const
+	{
+		return FPoint3D(X * other.X, Y * other.Y, Z * other.Z);
+	}
+
+	float FPoint3D::Sum() const
+	{
+		return X + Y + Z;
 	}
 }
