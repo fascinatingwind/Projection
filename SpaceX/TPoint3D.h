@@ -6,56 +6,21 @@
 namespace SpaceX
 {
 	template<class T>
-	class SpaceX_ExportDll TPoint3D
+	struct SpaceX_ExportDll TPoint3D
 	{
-	public:
+		// Should it store in array?
+		T X;
+		T Y;
+		T Z;
+
 		TPoint3D() = default;
 		~TPoint3D() = default;
 
-		explicit TPoint3D(T x, T y, T z) : m_x (x), m_y(y), m_z(z){}
-
-		TPoint3D& operator+=(const TPoint3D& other)
-		{
-			m_x += other.m_x;
-			m_y += other.m_y;
-			m_z += other.m_z;
-			
-			return this;
-		}
-
-		TPoint3D operator+(const TPoint3D& other) const
-		{
-			return { m_x + other.m_x, m_y + other.m_y, m_z + other.m_z };
-		}
-
-		TPoint3D operator-() const
-		{
-			return { -m_x, -m_y, -m_z };
-		}
+		explicit TPoint3D(T x, T y, T z) : X (x), Y(y), Z(z){}
 
 		std::array<T, 3> GetArray() const
 		{
-			return { m_x, m_y, m_z };
+			return { X, Y, Z };
 		}
-
-		T GetX() const
-		{
-			return m_x;
-		}
-
-		T GetY() const
-		{
-			return m_y;
-		}
-
-		T GetZ() const
-		{
-			return m_z;
-		}
-
-	protected:
-		T m_x;
-		T m_y;
-		T m_z;
 	};
 }
