@@ -91,16 +91,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ConsolePrint.cpp" />
     <ClCompile Include="FileReader.cpp" />
     <ClCompile Include="FPoint3DParser.cpp" />
+    <ClCompile Include="ProjectionFinder.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="StringConverter.cpp" />
     <ClCompile Include="StringSplitter.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ConsolePrint.h" />
     <ClInclude Include="FileReader.h" />
     <ClInclude Include="FPoint3DParser.h" />
     <ClInclude Include="precompiled.h" />
+    <ClInclude Include="ProjectionFinder.h" />
+    <ClInclude Include="SolutionStore.h" />
     <ClInclude Include="StringConverter.h" />
     <ClInclude Include="StringSplitter.h" />
   </ItemGroup>
