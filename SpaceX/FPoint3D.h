@@ -26,6 +26,8 @@ namespace SpaceX
 		FPoint3D operator*(const FPoint3D& other) const;
 
 		bool operator<(const FPoint3D& other) const;
+		
+		bool operator>(const FPoint3D& other) const;
 
 		float Sum() const;
 	};

@@ -52,4 +52,9 @@ namespace SpaceX
 	{
 		return X < other.X && Y < other.Y && Z < other.Z;
 	}
+
+	bool FPoint3D::operator>(const FPoint3D& other) const
+	{
+		return !operator<(other) && !operator==(other);
+	}
 }
