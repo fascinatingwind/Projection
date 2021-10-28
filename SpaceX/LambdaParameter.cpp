@@ -2,8 +2,8 @@
 
 namespace SpaceX
 {
-	float LambdaParameter::CalculateLambda(const FLine3D& line)
+	float LambdaParameter::CalculateLambda(const FLine3D& line, const FPoint3D& projection_point)
 	{
-		return	(line.GetStartPoint() * (line.GetStartPoint() - line.GetEndPoint())).Sum() / (line.GetNormal() * line.GetNormal()).Sum();
+		return	(projection_point * (line.GetStartPoint() - line.GetEndPoint())).Sum() / (line.GetNormal() * line.GetNormal()).Sum();
 	}
 }

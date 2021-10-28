@@ -9,6 +9,6 @@ namespace SpaceX
 		LambdaParameter() = delete;
 		~LambdaParameter() = delete;
 
-		static float CalculateLambda(const FLine3D& line);
+		static float CalculateLambda(const FLine3D& line, const FPoint3D& projection_point);
 	};
 }
