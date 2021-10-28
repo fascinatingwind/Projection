@@ -37,14 +37,19 @@ namespace SpaceX
 	{
 		return FPoint3D(-X, -Y, -Z);
 	}
-	
+
 	FPoint3D FPoint3D::operator*(const FPoint3D& other) const
 	{
 		return FPoint3D(X * other.X, Y * other.Y, Z * other.Z);
 	}
-	
+
 	float FPoint3D::Sum() const
 	{
 		return X + Y + Z;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const FPoint3D& point)
+	{
+		os << point.X << " " << point.Y << " " << point.Z;
 	}
 }

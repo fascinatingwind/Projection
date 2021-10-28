@@ -1,6 +1,8 @@
 #pragma once
 #include "dllexport.h"
 
+#include <ostream>
+
 #include "TPoint3D.h"
 
 namespace SpaceX
@@ -8,6 +10,8 @@ namespace SpaceX
 	struct SpaceX_ExportDll FPoint3D : public TPoint3D<float>
 	{
 	public:
+		friend std::ostream& operator<<(std::ostream& os, const FPoint3D& point);
+
 		FPoint3D() = default;
 		~FPoint3D() = default;
 
