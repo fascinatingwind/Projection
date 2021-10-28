@@ -13,7 +13,7 @@ namespace SpaceX
 	{
 		return NumericComparer::IsEqual(X, other.X)
 			&& NumericComparer::IsEqual(Y, other.Y)
-			&& NumericComparer::IsEqual(Y, other.Y);
+			&& NumericComparer::IsEqual(Z, other.Z);
 	}
 	FPoint3D& FPoint3D::operator+=(const FPoint3D& other)
 	{
@@ -46,5 +46,10 @@ namespace SpaceX
 	float FPoint3D::Sum() const
 	{
 		return X + Y + Z;
+	}
+
+	bool FPoint3D::operator<(const FPoint3D& other) const
+	{
+		return X < other.X && Y < other.Y && Z < other.Z;
 	}
 }
