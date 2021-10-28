@@ -1,9 +1,12 @@
 #pragma once
+#include "dllexport.h"
+
 #include "FLine3D.h"
+#include "FPoint3D.h"
 
 namespace SpaceX
 {
-	class LambdaParameter
+	class SpaceX_ExportDll LambdaParameter
 	{
 	public:
 		LambdaParameter() = delete;
