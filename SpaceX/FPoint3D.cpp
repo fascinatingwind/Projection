@@ -47,9 +47,4 @@ namespace SpaceX
 	{
 		return X + Y + Z;
 	}
-
-	std::ostream& operator<<(std::ostream& os, const FPoint3D& point)
-	{
-		os << point.X << " " << point.Y << " " << point.Z;
-	}
 }

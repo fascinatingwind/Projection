@@ -17,7 +17,9 @@ namespace Projection
 			<< " parameter "
 			<< solution.m_lambda_parameter
 			<< " point "
-			<< solution.m_projection
+			<< solution.m_projection.X << " "
+			<< solution.m_projection.Y << " "
+			<< solution.m_projection.Z << " "
 			<< std::endl;
 
 	}
