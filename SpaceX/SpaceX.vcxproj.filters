@@ -13,7 +13,7 @@
     <ClInclude Include="FPoint3D.h">
       <Filter>Types</Filter>
     </ClInclude>
-    <ClInclude Include="FLine.h">
+    <ClInclude Include="FLine3D.h">
       <Filter>Types</Filter>
     </ClInclude>
     <ClInclude Include="TPoint3D.h">
@@ -21,6 +21,21 @@
     </ClInclude>
     <ClInclude Include="TMatrix3x3.h">
       <Filter>Types\Templates</Filter>
+    </ClInclude>
+    <ClInclude Include="FMatrix3x3.h">
+      <Filter>Types</Filter>
+    </ClInclude>
+    <ClInclude Include="IProjectionPoint3D.h">
+      <Filter>Algorithms\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="KramerProjectionSolver.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="LambdaParameter.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="RepresentationHelper.h">
+      <Filter>Helpers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -36,6 +51,12 @@
     <Filter Include="Types\Templates">
       <UniqueIdentifier>{3b44bbe1-8275-4e82-928d-fed71e7be1a5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Algorithms">
+      <UniqueIdentifier>{c7790465-0bd6-4491-8bb9-e82d64990dc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algorithms\Interfaces">
+      <UniqueIdentifier>{d2e6664b-1acc-4f85-9a55-94aff1e757a0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="NumericComparer.cpp">
@@ -44,14 +65,23 @@
     <ClCompile Include="FPoint3D.cpp">
       <Filter>Types</Filter>
     </ClCompile>
-    <ClCompile Include="FLine.cpp">
+    <ClCompile Include="FLine3D.cpp">
       <Filter>Types</Filter>
     </ClCompile>
-    <ClCompile Include="TPoint3D.cpp">
-      <Filter>Types\Templates</Filter>
+    <ClCompile Include="FMatrix3x3.cpp">
+      <Filter>Types</Filter>
     </ClCompile>
-    <ClCompile Include="TMatrix3x3.cpp">
-      <Filter>Types\Templates</Filter>
+    <ClCompile Include="IProjectionPoint3D.cpp">
+      <Filter>Algorithms\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="KramerProjectionSolver.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="LambdaParameter.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="RepresentationHelper.cpp">
+      <Filter>Helpers</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
