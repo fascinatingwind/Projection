@@ -27,18 +27,32 @@ namespace Projection
     }
 
     std::vector<SolutionStore> ProjectionFinder::FindNearPointsProjection(
-        const std::vector<FPoint3D> poly_line, const FPoint3D& input_point)
+        const std::vector<FPoint3D>& poly_line, const FPoint3D& input_point)
     {
+        assert(!poly_line.empty());
+
         std::vector<SolutionStore> solutions;
         solutions.reserve(poly_line.size());
+
+        // check if point is out of bounds of current poly line
+        const auto min_point = *std::min_element(poly_line.begin(), poly_line.end());
+        const auto max_point = *std::max_element(poly_line.begin(), poly_line.end());
+        const bool is_out_of_bound = min_point < input_point && input_point > max_point;
 
         for (int i = 1; i < poly_line.size(); i++)
         {
             auto solution = FindNearPointProjection(
                 FLine3D(poly_line[i - 1], poly_line[i]), input_point);
             solution.m_segment_number = i - 1;
-            if(solution.m_lambda_parameter >= 0 && solution.m_lambda_parameter <= 1)
+            if (is_out_of_bound)
+            {
+                // take bound point of section
+                solutions.emplace_back(solution.m_lambda_parameter > 1 ? poly_line[i] : poly_line[i-1]);
+            }
+            else if (solution.m_lambda_parameter >= 0 && solution.m_lambda_parameter <= 1)
+            {
                 solutions.emplace_back(solution);
+            }
         }
 
         return solutions;
