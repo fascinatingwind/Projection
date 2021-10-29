@@ -1,7 +1,10 @@
 #include "ProjectionFinder.h"
 
+#include <cmath>
+
 #include "KramerProjectionSolver.h"
 #include "LambdaParameter.h"
+#include "NumericComparer.h"
 
 namespace SpaceX
 {
@@ -12,6 +15,8 @@ namespace SpaceX
         KramerProjectionSolver solver;
         store.m_projection = solver.CalculateProjection(line, input_point);
         store.m_lambda_parameter = LambdaParameter::CalculateLambda(line, store.m_projection);
+        const auto distance = store.m_projection - input_point;
+        store.m_length_projection_segment = std::sqrt((distance * distance).Sum());
         return store;
     }
 
@@ -29,20 +34,20 @@ namespace SpaceX
             auto solution = FindNearPointProjection(
                 FLine3D(poly_line[i - 1], poly_line[i]), input_point);
             solution.m_segment_number = i;
-                // take bound point of section
-            if (solution.m_lambda_parameter < 0 )
-            {
-                solution.m_projection = poly_line[i - 1];
-                solution.m_lambda_parameter = 0.f;
-            }
-            if (solution.m_lambda_parameter > 1)
-            {
-                solution.m_projection = poly_line[i];
-                solution.m_lambda_parameter = 1.f;
-            }
-
             solutions.emplace_back(solution);
         }
+        
+        const auto minimum_distance = std::min_element(solutions.begin(), solutions.end(),
+            [](const SolutionStore& left, const SolutionStore& right) 
+            { 
+                return NumericComparer::IsLess(left.m_length_projection_segment, right.m_length_projection_segment); 
+            });
+
+        solutions.erase(std::remove_if(solutions.begin(), solutions.end(), 
+            [minimum_distance](const SolutionStore& store) {
+                return NumericComparer::IsLess(minimum_distance->m_length_projection_segment, store.m_length_projection_segment);
+            }), solutions.end());
+
         return solutions;
     }
 }
