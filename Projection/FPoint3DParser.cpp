@@ -9,9 +9,7 @@ namespace Projection
 	FPoint3D FPoint3DParser::GetPoint(const std::string& string)
 	{
 		const auto lines = StringConverter::ConvertAll(StringSplitter::Split(string));
-		if (lines.size() != 3)
-			return FPoint3D();
-		
+		assert(lines.size() == 3);
 		return FPoint3D( lines[0], lines[1], lines[2]);
 	}
 
