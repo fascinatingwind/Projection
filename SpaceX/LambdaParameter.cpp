@@ -6,6 +6,6 @@ namespace SpaceX
 		const FPoint3D& projection_point)
 	{
 		const auto normal = line.GetNormal();
-		return ((projection_point - line.GetStartPoint()) * (normal)).Sum() / (normal * normal).Sum();
+		return ((projection_point - line.GetStartPoint()) * normal).Sum() / (normal * normal).Sum();
 	}
 }
