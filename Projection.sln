@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpaceX", "SpaceX\SpaceX.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpaceX.Test", "SpaceX.Test\SpaceX.Test.vcxproj", "{888CA407-30D0-4E6C-AADD-36A5ED17C4FA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Utility", "Utility\Utility.vcxproj", "{A30B4CBD-DD91-471C-9335-9DF5FD5850B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -26,6 +28,10 @@ Global
 		{888CA407-30D0-4E6C-AADD-36A5ED17C4FA}.Debug|x64.ActiveCfg = Debug|x64
 		{888CA407-30D0-4E6C-AADD-36A5ED17C4FA}.Debug|x64.Build.0 = Debug|x64
 		{888CA407-30D0-4E6C-AADD-36A5ED17C4FA}.Release|x64.ActiveCfg = Release|x64
+		{A30B4CBD-DD91-471C-9335-9DF5FD5850B9}.Debug|x64.ActiveCfg = Debug|x64
+		{A30B4CBD-DD91-471C-9335-9DF5FD5850B9}.Debug|x64.Build.0 = Debug|x64
+		{A30B4CBD-DD91-471C-9335-9DF5FD5850B9}.Release|x64.ActiveCfg = Release|x64
+		{A30B4CBD-DD91-471C-9335-9DF5FD5850B9}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
