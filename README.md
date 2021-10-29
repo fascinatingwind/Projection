@@ -1,21 +1,19 @@
 ## For find projection of point C to a line AB (points A,B) need:
 
 Create matrix representation of line
-![Matrix representation of line ](svg/MatrixRepresentationOfLine.svg)
+![Matrix representation of line ](svg/MatrixM.svg)
 
-Take 2 non zero rows\
+Take 2 non zero rows
 
-Create matrix and point\
-Our System of linear equation look like (M) = (P)
+Create System Level Equation look like [M] = [P]
 ![Formula matrix M](svg/SLE.svg)
 
-found det of M\
-replace 1st column of M to point from P found det of Mx\
-replace 2st column of M to point from P found det of My\
-replace 3st column of M to point from P found det of Mz
+found determinant of M\
+replace 1st column of M from point P find det of Mx\
+replace 2st column of M from point P find det of My\
+replace 3st column of M from point P find det of Mz
 
-projection point will be \
-{det(Mx)/det(M), det(My)/det(M), det(Mz)/det(M)}
+![Coords of projection point](svg/ProjectionPoint.svg)
 
 ## Found a lambda parameter
 
