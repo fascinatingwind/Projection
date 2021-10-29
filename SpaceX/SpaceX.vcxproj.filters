@@ -16,17 +16,8 @@
     <ClInclude Include="FLine3D.h">
       <Filter>Types</Filter>
     </ClInclude>
-    <ClInclude Include="TPoint3D.h">
-      <Filter>Types\Templates</Filter>
-    </ClInclude>
-    <ClInclude Include="TMatrix3x3.h">
-      <Filter>Types\Templates</Filter>
-    </ClInclude>
     <ClInclude Include="FMatrix3x3.h">
       <Filter>Types</Filter>
-    </ClInclude>
-    <ClInclude Include="IProjectionPoint3D.h">
-      <Filter>Algorithms\Interfaces</Filter>
     </ClInclude>
     <ClInclude Include="KramerProjectionSolver.h">
       <Filter>Algorithms</Filter>
@@ -34,7 +25,7 @@
     <ClInclude Include="LambdaParameter.h">
       <Filter>Algorithms</Filter>
     </ClInclude>
-    <ClInclude Include="RepresentationHelper.h">
+    <ClInclude Include="Matrix3DHelper.h">
       <Filter>Helpers</Filter>
     </ClInclude>
     <ClInclude Include="SolutionStore.h">
@@ -54,14 +45,8 @@
     <Filter Include="Headers">
       <UniqueIdentifier>{c5189321-97d9-4ee7-9123-ca300a93766e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Types\Templates">
-      <UniqueIdentifier>{3b44bbe1-8275-4e82-928d-fed71e7be1a5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Algorithms">
       <UniqueIdentifier>{c7790465-0bd6-4491-8bb9-e82d64990dc4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Algorithms\Interfaces">
-      <UniqueIdentifier>{d2e6664b-1acc-4f85-9a55-94aff1e757a0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -77,16 +62,13 @@
     <ClCompile Include="FMatrix3x3.cpp">
       <Filter>Types</Filter>
     </ClCompile>
-    <ClCompile Include="IProjectionPoint3D.cpp">
-      <Filter>Algorithms\Interfaces</Filter>
-    </ClCompile>
     <ClCompile Include="KramerProjectionSolver.cpp">
       <Filter>Algorithms</Filter>
     </ClCompile>
     <ClCompile Include="LambdaParameter.cpp">
       <Filter>Algorithms</Filter>
     </ClCompile>
-    <ClCompile Include="RepresentationHelper.cpp">
+    <ClCompile Include="Matrix3DHelper.cpp">
       <Filter>Helpers</Filter>
     </ClCompile>
     <ClCompile Include="ProjectionFinder.cpp">

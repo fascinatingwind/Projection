@@ -3,20 +3,19 @@
 
 namespace Utility
 {
+	// Read file by file name.
+	// Use RAII technique.
 	class Utility_ExportDll FileReader
 	{
 	public:
-		FileReader() = default;
+		// Read file by lines and store in class.
+		explicit FileReader(const std::string& name);
 		~FileReader() = default;
 		
-		explicit FileReader(std::string name);
-		
+		// Return stored lines of readed file.
 		std::vector<std::string> GetLines() const;
 	
 	private:
-		std::string m_file_name;
 		std::vector<std::string> m_lines;
-
-		void Read();
 	};
 }

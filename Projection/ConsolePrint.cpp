@@ -22,6 +22,5 @@ namespace Projection
 			<< solution.m_projection.Y + 0.f<< " "
 			<< solution.m_projection.Z + 0.f<< " "
 			<< std::endl;
-
 	}
 }

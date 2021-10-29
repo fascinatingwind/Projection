@@ -1,8 +1,8 @@
-#include "RepresentationHelper.h"
+#include "Matrix3DHelper.h"
 
 namespace SpaceX
 {
-	FMatrix3x3 RepresentationHelper::GetMatrixRepresentation(const FLine3D& line)
+	FMatrix3x3 Matrix3DHelper::GetMatrixRepresentation(const FLine3D& line)
 	{
 		const auto revert = line.GetStartPoint() - line.GetEndPoint();
 		const auto normal = line.GetNormal();
@@ -13,7 +13,7 @@ namespace SpaceX
 		);
 	}
 
-	std::array<FPoint3D, 2> RepresentationHelper::Get2NonZeroRows(const FMatrix3x3& matrix)
+	std::array<FPoint3D, 2> Matrix3DHelper::Get2NonZeroRows(const FMatrix3x3& matrix)
 	{
 		std::array<FPoint3D, 2> result = { FPoint3D(), FPoint3D() };
 		int step = 0;

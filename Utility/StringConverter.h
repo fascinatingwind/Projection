@@ -5,35 +5,17 @@
 
 namespace Utility
 {
+	// Use for parsing string to other types like int, float, etc.
+	// In current case implement float parsing
 	class Utility_ExportDll StringConverter
 	{
 	public:
 		StringConverter() = delete;
 		~StringConverter() = delete;
 		
+		// Return float number from string like 213.0asda
 		static float ConvertTo(const std::string& string);
+		// Return all float numbers from vector of strings
 		static std::vector<float> ConvertAll(const std::vector<std::string>& lines);
-
-	private:
-		// for simple types like int double, float
-		template<class T>
-		static T ConvertTo(const std::string& string)
-		{
-			T value;
-			std::stringstream stream(string);
-			stream >> value;
-			return value;
-		}
-
-		template<class T>
-		static std::vector<T> ConvertAll(const std::vector<std::string>& lines)
-		{
-			std::vector<T> result;
-			for (const auto& line : lines)
-			{
-				result.push_back(ConvertTo<T>(line));
-			}
-			return result;
-		}
 	};
 }

@@ -7,20 +7,11 @@
 
 namespace Utility
 {
-	FileReader::FileReader(std::string name)
-		: m_file_name(std::move(name))
+	FileReader::FileReader(const std::string& name)
 	{
-		Read();
-	}
+		assert(name.empty());
 
-	std::vector<std::string> FileReader::GetLines() const
-	{
-		return m_lines;
-	}
-
-	void FileReader::Read()
-	{
-		std::ifstream in_stream(m_file_name);
+		std::ifstream in_stream(name);
 		if (in_stream.is_open())
 		{
 			std::string line;
@@ -32,7 +23,12 @@ namespace Utility
 		}
 		else
 		{
-			std::cerr << "Can't open file name : " << m_file_name << std::endl;
+			std::cerr << "Can't open file name : " << name << std::endl;
 		}
+	}
+
+	std::vector<std::string> FileReader::GetLines() const
+	{
+		return m_lines;
 	}
 }
