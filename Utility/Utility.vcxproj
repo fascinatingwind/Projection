@@ -13,9 +13,11 @@
   <ItemGroup>
     <ClInclude Include="dllexport.h" />
     <ClInclude Include="precompiled.h" />
+    <ClInclude Include="StringConverter.h" />
     <ClInclude Include="StringSplitter.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="StringConverter.cpp" />
     <ClCompile Include="StringSplitter.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

@@ -1,6 +1,6 @@
 #include "StringConverter.h"
 
-namespace Projection
+namespace Utility
 {
 	float StringConverter::ConvertTo(const std::string& line)
 	{

@@ -1,10 +1,11 @@
 #pragma once
+#include "dllexport.h"
 
 #include <sstream>
 
-namespace Projection
+namespace Utility
 {
-	class StringConverter
+	class Utility_ExportDll StringConverter
 	{
 	public:
 		StringConverter() = delete;

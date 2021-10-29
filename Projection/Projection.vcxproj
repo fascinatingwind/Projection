@@ -95,14 +95,12 @@
     <ClCompile Include="FileReader.cpp" />
     <ClCompile Include="FPoint3DParser.cpp" />
     <ClCompile Include="Source.cpp" />
-    <ClCompile Include="StringConverter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ConsolePrint.h" />
     <ClInclude Include="FileReader.h" />
     <ClInclude Include="FPoint3DParser.h" />
     <ClInclude Include="precompiled.h" />
-    <ClInclude Include="StringConverter.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SpaceX\SpaceX.vcxproj">
