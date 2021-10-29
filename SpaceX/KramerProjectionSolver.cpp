@@ -5,7 +5,7 @@
 namespace SpaceX
 {
 	FPoint3D KramerProjectionSolver::CalculateProjection(const FLine3D& line,
-		const FPoint3D& point)
+		const FPoint3D& point) const
 	{
 		const auto matrix_representation = RepresentationHelper::GetMatrixRepresentation(line);
 		
