@@ -97,6 +97,7 @@
     <ClInclude Include="KramerProjectionSolver.h" />
     <ClInclude Include="LambdaParameter.h" />
     <ClInclude Include="RepresentationHelper.h" />
+    <ClInclude Include="SolutionStore.h" />
     <ClInclude Include="TMatrix3x3.h" />
     <ClInclude Include="NumericComparer.h" />
     <ClInclude Include="precompiled.h" />

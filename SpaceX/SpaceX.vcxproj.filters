@@ -37,6 +37,9 @@
     <ClInclude Include="RepresentationHelper.h">
       <Filter>Helpers</Filter>
     </ClInclude>
+    <ClInclude Include="SolutionStore.h">
+      <Filter>Types</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Types">

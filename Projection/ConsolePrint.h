@@ -1,8 +1,11 @@
 #pragma once
+
 #include "SolutionStore.h"
 
 namespace Projection
 {
+	using namespace SpaceX;
+
 	class ConsolePrint
 	{
 	public:

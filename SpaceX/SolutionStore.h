@@ -1,10 +1,9 @@
 #pragma once
+
 #include "FPoint3D.h"
 
-namespace Projection
+namespace SpaceX
 {
-	using namespace SpaceX;
-
 	struct SolutionStore
 	{
 		FPoint3D m_projection;

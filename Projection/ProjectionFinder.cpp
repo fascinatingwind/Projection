@@ -12,17 +12,6 @@ namespace Projection
         KramerProjectionSolver solver;
         store.m_projection = solver.CalculateProjection(line, input_point);
         store.m_lambda_parameter = LambdaParameter::CalculateLambda(line, store.m_projection);
-        
-        // if lambda param is out of bound [0;1] than we take line points
-        if (NumericComparer::IsGreater(store.m_lambda_parameter, 1.f))
-        {
-            store.m_projection = line.GetEndPoint();
-        }
-        else if (NumericComparer::IsLess(store.m_lambda_parameter, 0.f))
-        {
-            store.m_projection = line.GetStartPoint();
-        }
-
         return store;
     }
 

@@ -105,7 +105,6 @@
     <ClInclude Include="FPoint3DParser.h" />
     <ClInclude Include="precompiled.h" />
     <ClInclude Include="ProjectionFinder.h" />
-    <ClInclude Include="SolutionStore.h" />
     <ClInclude Include="StringConverter.h" />
     <ClInclude Include="StringSplitter.h" />
   </ItemGroup>
