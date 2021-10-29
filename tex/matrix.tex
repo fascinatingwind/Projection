@@ -1,9 +1,11 @@
+Matrix M =
 \begin{bmatrix}
 yB - yA & xA - xB & 0 \\
 zB - zA & 0 & xA - xB \\
 0 & zB - zA & yB - yA \\
 \end{bmatrix}
 
+System level equation =>
 \begin{bmatrix}
 yB - yA & xA - xB & 0 \\
 zB - zA & 0 & xA - xB \\
@@ -16,4 +18,16 @@ yA(zB - zA) - zA(xB - xA)\\
 xC(xB - xA) + yC(yB - yA) + zC(zB - zA)\\
 \end{bmatrix}
 
-\frac{xP(xA-xB) + yP(yA-yB) + zP(zA-zB)}{(xB-xA)^2 + (yB-yA)^2 + (zB-zA)^2)}
+Parameter\ \lambda \ = \frac{(xP - xA)(xB-xA) + (yP-yA)(yB-yA) + (zP - zA)(zB-zA)}{(xB-xA)^2 + (yB-yA)^2 + (zB-zA)^2)}
+
+Xpp = \frac{|Mx|}{|M|}\
+
+Ypp = \frac{|My|}{|M|}\
+
+Zpp = \frac{|Mz|}{|M|}\
+
+\begin{bmatrix}
+\frac{|Mx|}{|M|} \\
+\frac{|My|}{|M|} \\
+\frac{|Mz|}{|M|}\\
+\end{bmatrix}
