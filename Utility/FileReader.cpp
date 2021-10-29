@@ -9,7 +9,7 @@ namespace Utility
 {
 	FileReader::FileReader(const std::string& name)
 	{
-		assert(name.empty());
+		assert(!name.empty());
 
 		std::ifstream in_stream(name);
 		if (in_stream.is_open())
