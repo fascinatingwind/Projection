@@ -19,7 +19,11 @@ namespace SpaceX
 			const FLine3D& line, const FPoint3D& input_point);
 
 		// Returns all projection points of a poly line
-		static std::vector<SolutionStore> FindNearPointsProjection(
+		static std::list<SolutionStore> FindNearPointsProjection(
 			const std::vector<FPoint3D>& poly_line, const FPoint3D& input_point);
+	
+	private:
+		// Build line from neighboring points
+		static std::vector<FLine3D> GetLinesFromVectorPoints(const std::vector<FPoint3D>& poly_line);
 	};
 }

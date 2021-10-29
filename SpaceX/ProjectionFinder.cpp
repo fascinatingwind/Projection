@@ -20,34 +20,61 @@ namespace SpaceX
         return store;
     }
 
-    std::vector<SolutionStore> ProjectionFinder::FindNearPointsProjection(
+    std::list<SolutionStore> ProjectionFinder::FindNearPointsProjection(
         const std::vector<FPoint3D>& poly_line, const FPoint3D& input_point)
     {
         assert(!poly_line.empty());
 
-        std::vector<SolutionStore> solutions;
-        solutions.reserve(poly_line.size());
-       
-        // find all solutions
-        for (int i = 1; i < poly_line.size(); i++)
+        const auto lines = GetLinesFromVectorPoints(poly_line);
+
+        std::list<SolutionStore> solutions;
+        size_t segment_number = 0;
+        for (const auto& line : lines)
         {
-            auto solution = FindNearPointProjection(
-                FLine3D(poly_line[i - 1], poly_line[i]), input_point);
-            solution.m_segment_number = i;
+            auto solution = FindNearPointProjection(line, input_point);
+            solution.m_segment_number = ++segment_number;
             solutions.emplace_back(solution);
         }
         
-        const auto minimum_distance = std::min_element(solutions.begin(), solutions.end(),
+        // find minimal distance to projection points
+        const auto min_distance = *std::min_element(solutions.begin(), solutions.end(), 
             [](const SolutionStore& left, const SolutionStore& right) 
-            { 
-                return NumericComparer::IsLess(left.m_length_projection_segment, right.m_length_projection_segment); 
+            {
+                return NumericComparer::IsLess(left.m_length_projection_segment, right.m_length_projection_segment);
             });
-
+        
         solutions.erase(std::remove_if(solutions.begin(), solutions.end(), 
-            [minimum_distance](const SolutionStore& store) {
-                return NumericComparer::IsLess(minimum_distance->m_length_projection_segment, store.m_length_projection_segment);
+            [min_distance](const SolutionStore& item) {
+                return NumericComparer::IsLess(min_distance.m_length_projection_segment, item.m_length_projection_segment);
             }), solutions.end());
-
+        
+        // check if projection point is out of bound line segment
+        for (auto& item : solutions)
+        {
+            if (NumericComparer::IsGreater(item.m_lambda_parameter, 1.f))
+            {
+                item.m_lambda_parameter = 1.f;
+                item.m_projection = lines[item.m_segment_number].GetStartPoint();
+            }
+            if (NumericComparer::IsLess(item.m_lambda_parameter, 0.f))
+            {
+                item.m_lambda_parameter = 0.f;
+                item.m_projection = lines[item.m_segment_number - 1].GetStartPoint();
+            }
+        }
         return solutions;
+    }
+
+    std::vector<FLine3D> ProjectionFinder::GetLinesFromVectorPoints(const std::vector<FPoint3D>& poly_line)
+    {
+        std::vector<FLine3D> lines;
+        lines.reserve(poly_line.size() - 1);
+
+        // init lines
+        for (int i = 1; i < poly_line.size(); i++)
+        {
+            lines.push_back(FLine3D(poly_line[i - 1], poly_line[i]));
+        }
+        return lines;
     }
 }
