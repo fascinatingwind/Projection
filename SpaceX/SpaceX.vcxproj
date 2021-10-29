@@ -98,10 +98,8 @@
     <ClInclude Include="ProjectionFinder.h" />
     <ClInclude Include="Matrix3DHelper.h" />
     <ClInclude Include="SolutionStore.h" />
-    <ClInclude Include="TMatrix3x3.h" />
     <ClInclude Include="NumericComparer.h" />
     <ClInclude Include="precompiled.h" />
-    <ClInclude Include="TPoint3D.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FLine3D.cpp" />
