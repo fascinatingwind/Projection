@@ -11,7 +11,7 @@ namespace Projection
         SolutionStore store;
         KramerProjectionSolver solver;
         store.m_projection = solver.CalculateProjection(line, input_point);
-        store.m_lambda_parameter = LambdaParameter::CalculateLambda(line, input_point);
+        store.m_lambda_parameter = LambdaParameter::CalculateLambda(line, store.m_projection);
         
         // if lambda param is out of bound [0;1] than we take line points
         if (NumericComparer::IsGreater(store.m_lambda_parameter, 1.f))
@@ -33,29 +33,27 @@ namespace Projection
 
         std::vector<SolutionStore> solutions;
         solutions.reserve(poly_line.size());
-
-        // check if point is out of bounds of current poly line
-        const auto min_point = *std::min_element(poly_line.begin(), poly_line.end());
-        const auto max_point = *std::max_element(poly_line.begin(), poly_line.end());
-        const bool is_out_of_bound = min_point < input_point && input_point > max_point;
-
+       
+        // find all solutions
         for (int i = 1; i < poly_line.size(); i++)
         {
             auto solution = FindNearPointProjection(
                 FLine3D(poly_line[i - 1], poly_line[i]), input_point);
-            solution.m_segment_number = i - 1;
-            if (is_out_of_bound)
-            {
+            solution.m_segment_number = i;
                 // take bound point of section
-                solution.m_projection = solution.m_lambda_parameter > 1 ? poly_line[i] : poly_line[i - 1];
-                solutions.emplace_back(solution);
-            }
-            else if (solution.m_lambda_parameter >= 0 && solution.m_lambda_parameter <= 1)
+            if (solution.m_lambda_parameter < 0 )
             {
-                solutions.emplace_back(solution);
+                solution.m_projection = poly_line[i - 1];
+                solution.m_lambda_parameter = 0.f;
             }
-        }
+            if (solution.m_lambda_parameter > 1)
+            {
+                solution.m_projection = poly_line[i];
+                solution.m_lambda_parameter = 1.f;
+            }
 
+            solutions.emplace_back(solution);
+        }
         return solutions;
     }
 }
