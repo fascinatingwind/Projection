@@ -5,7 +5,7 @@
 
 #include "StringSplitter.h"
 
-namespace Projection
+namespace Utility
 {
 	FileReader::FileReader(std::string name)
 		: m_file_name(std::move(name))

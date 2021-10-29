@@ -92,13 +92,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ConsolePrint.cpp" />
-    <ClCompile Include="FileReader.cpp" />
     <ClCompile Include="FPoint3DParser.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ConsolePrint.h" />
-    <ClInclude Include="FileReader.h" />
     <ClInclude Include="FPoint3DParser.h" />
     <ClInclude Include="precompiled.h" />
   </ItemGroup>

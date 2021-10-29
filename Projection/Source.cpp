@@ -10,6 +10,7 @@
 
 using namespace Projection;
 using namespace SpaceX;
+using namespace Utility;
 
 std::string GetString(char* argv)
 {

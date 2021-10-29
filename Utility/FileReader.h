@@ -1,8 +1,9 @@
 #pragma once
+#include "dllexport.h"
 
-namespace Projection
+namespace Utility
 {
-	class FileReader
+	class Utility_ExportDll FileReader
 	{
 	public:
 		FileReader() = default;

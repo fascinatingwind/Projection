@@ -12,11 +12,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dllexport.h" />
+    <ClInclude Include="FileReader.h" />
     <ClInclude Include="precompiled.h" />
     <ClInclude Include="StringConverter.h" />
     <ClInclude Include="StringSplitter.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="FileReader.cpp" />
     <ClCompile Include="StringConverter.cpp" />
     <ClCompile Include="StringSplitter.cpp" />
   </ItemGroup>
