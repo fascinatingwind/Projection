@@ -13,6 +13,10 @@
   <ItemGroup>
     <ClInclude Include="dllexport.h" />
     <ClInclude Include="precompiled.h" />
+    <ClInclude Include="StringSplitter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="StringSplitter.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

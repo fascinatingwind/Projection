@@ -62,7 +62,7 @@
       <PrecompiledHeader>Create</PrecompiledHeader>
       <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
       <ForcedIncludeFiles>precompiled.h</ForcedIncludeFiles>
-      <AdditionalIncludeDirectories>$(SolutionDir)SpaceX;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)SpaceX;$(SolutionDir)Utility;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -81,7 +81,7 @@
       <PrecompiledHeader>Create</PrecompiledHeader>
       <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
       <ForcedIncludeFiles>precompiled.h</ForcedIncludeFiles>
-      <AdditionalIncludeDirectories>$(SolutionDir)SpaceX;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)SpaceX;$(SolutionDir)Utility;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -96,7 +96,6 @@
     <ClCompile Include="FPoint3DParser.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="StringConverter.cpp" />
-    <ClCompile Include="StringSplitter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ConsolePrint.h" />
@@ -104,11 +103,13 @@
     <ClInclude Include="FPoint3DParser.h" />
     <ClInclude Include="precompiled.h" />
     <ClInclude Include="StringConverter.h" />
-    <ClInclude Include="StringSplitter.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SpaceX\SpaceX.vcxproj">
       <Project>{798f3ef7-2800-4cff-952f-ebfba12a8876}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.vcxproj">
+      <Project>{a30b4cbd-dd91-471c-9335-9df5fd5850b9}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

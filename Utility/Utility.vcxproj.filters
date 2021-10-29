@@ -15,5 +15,13 @@
     <ClInclude Include="precompiled.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="StringSplitter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="StringSplitter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,7 +1,9 @@
 #pragma once
-namespace Projection
+#include "dllexport.h"
+
+namespace Utility
 {
-	class StringSplitter
+	class Utility_ExportDll StringSplitter
 	{
 	public:
 		StringSplitter() = delete;

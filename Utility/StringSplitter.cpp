@@ -1,6 +1,6 @@
 #include "StringSplitter.h"
 
-namespace Projection
+namespace Utility
 {
     std::vector<std::string> StringSplitter::Split(const std::string& str, const std::string& delim) {
         std::vector<std::string> lines;

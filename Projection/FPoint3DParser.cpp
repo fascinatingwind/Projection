@@ -4,6 +4,8 @@
 
 namespace Projection
 {
+	using namespace Utility;
+
 	FPoint3D FPoint3DParser::GetPoint(const std::string& string)
 	{
 		const auto lines = StringConverter::ConvertAll(StringSplitter::Split(string));
