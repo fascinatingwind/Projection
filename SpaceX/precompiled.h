@@ -6,3 +6,4 @@
 #include <array>
 #include <algorithm>
 #include <cassert>
+#include <list>
