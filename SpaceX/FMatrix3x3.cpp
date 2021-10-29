@@ -96,12 +96,9 @@ namespace SpaceX
 		if (column >= m_dimension || column < 0)
 			return;
 
-		for (int i = 0; i < m_dimension; i++)
-		{
-			m_array[i][0] = point.X;
-			m_array[i][1] = point.Y;
-			m_array[i][2] = point.Z;
-		}
+		m_array[0][column] = point.X;
+		m_array[1][column] = point.Y;
+		m_array[2][column] = point.Z;
 	}
 
 	size_t FMatrix3x3::GetDimension()
