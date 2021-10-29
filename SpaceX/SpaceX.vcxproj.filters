@@ -40,6 +40,9 @@
     <ClInclude Include="SolutionStore.h">
       <Filter>Types</Filter>
     </ClInclude>
+    <ClInclude Include="ProjectionFinder.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Types">
@@ -85,6 +88,9 @@
     </ClCompile>
     <ClCompile Include="RepresentationHelper.cpp">
       <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectionFinder.cpp">
+      <Filter>Algorithms</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

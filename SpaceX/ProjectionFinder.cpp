@@ -3,7 +3,7 @@
 #include "KramerProjectionSolver.h"
 #include "LambdaParameter.h"
 
-namespace Projection
+namespace SpaceX
 {
     SolutionStore ProjectionFinder::FindNearPointProjection(
         const FLine3D& line, const FPoint3D& input_point)

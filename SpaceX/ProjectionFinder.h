@@ -1,14 +1,13 @@
 #pragma once
+#include "dllexport.h"
 
 #include "FPoint3D.h"
 #include "FLine3D.h"
 #include "SolutionStore.h"
 
-namespace Projection
+namespace SpaceX
 {
-	using namespace SpaceX;
-
-	class ProjectionFinder
+	class SpaceX_ExportDll ProjectionFinder
 	{
 	public:
 		ProjectionFinder() = delete;
