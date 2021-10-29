@@ -5,7 +5,7 @@
 namespace SpaceX
 {
 	FPoint3D::FPoint3D(float x, float y, float z)
-		: TPoint3D(x, y, z)
+		: X(x), Y(y), Z(z)
 	{
 	}
 

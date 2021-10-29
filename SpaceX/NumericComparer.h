@@ -3,43 +3,26 @@
 
 namespace SpaceX
 {
+	// Comparing simple numeric types like int, float, double.
+	// Using static methods.
+	// For this case use only for float numbers.
+	// From The art of computer programming by Knuth.
 	class SpaceX_ExportDll NumericComparer
 	{
 	public:
 		NumericComparer() = delete;
 		~NumericComparer() = delete;
 
+		// Checking absolute difference of two numbers 
+		// within epsilon multiplied by the maximum value.
 		static bool IsEqual(float a, float b, float epsilon = 1e-7);
-		static bool IsGreater(float a, float b, float epsilon = 1e-7);
-		static bool IsLess(float a, float b, float epsilon = 1e-7);
 		
-		static bool IsEqual(double a, double b, double epsilon = 1e-7);
-		static bool IsGreater(double a, double b, double epsilon = 1e-7);
-		static bool IsLess(double a, double b, double epsilon = 1e-7);
-
-	private:
-		template<class T>
-		static bool approximatelyEqual(T a, T b, T epsilon = std::numeric_limits<T>().epsilon())
-		{
-			return std::abs(a - b) <= ((std::abs(a) < std::abs(b) ? std::abs(b) : std::abs(a)) * epsilon);
-		}
-
-		template<class T>
-		static bool essentiallyEqual(T a, T b, T epsilon = std::numeric_limits<T>().epsilon())
-		{
-			return std::abs(a - b) <= ((std::abs(a) > std::abs(b) ? std::abs(b) : std::abs(a)) * epsilon);
-		}
-
-		template<class T>
-		static bool definitelyGreaterThan(T a, T b, T epsilon = std::numeric_limits<T>().epsilon())
-		{
-			return (a - b) > ((std::abs(a) < std::abs(b) ? std::abs(b) : std::abs(a)) * epsilon);
-		}
-
-		template<class T>
-		static bool definitelyLessThan(T a, T b, T epsilon = std::numeric_limits<T>().epsilon())
-		{
-			return (b - a) > ((std::abs(a) < std::abs(b) ? std::abs(b) : std::abs(a)) * epsilon);
-		}
+		// Check if a is greater than b 
+		// within epsilon multiplied by the maximum value.
+		static bool IsGreater(float a, float b, float epsilon = 1e-7);
+		
+		// The same as above method
+		// but swap a and b numbers
+		static bool IsLess(float a, float b, float epsilon = 1e-7);
 	};
 }

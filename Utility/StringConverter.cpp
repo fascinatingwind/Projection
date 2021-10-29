@@ -2,13 +2,21 @@
 
 namespace Utility
 {
-	float StringConverter::ConvertTo(const std::string& line)
+	float StringConverter::ConvertTo(const std::string& string)
 	{
-		return ConvertTo<float>(line);
+		float value = 0.f;
+		std::stringstream stream(string);
+		stream >> value;
+		return value;
 	}
 
 	std::vector<float> StringConverter::ConvertAll(const std::vector<std::string>& lines)
 	{
-		return ConvertAll<float>(lines);
+		std::vector<float> result;
+		for (const auto& line : lines)
+		{
+			result.push_back(ConvertTo(line));
+		}
+		return result;
 	}
 }
