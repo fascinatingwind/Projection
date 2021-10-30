@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Utility", "Utility\Utility.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpaceT", "SpaceT\SpaceT.vcxproj", "{80F72357-C224-4BD9-AB2A-98BBFF9DA469}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpaceT.Test", "SpaceT.Test\SpaceT.Test.vcxproj", "{0866CDCB-5C00-45E5-8956-BF3C389EBE88}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -38,6 +40,10 @@ Global
 		{80F72357-C224-4BD9-AB2A-98BBFF9DA469}.Debug|x64.Build.0 = Debug|x64
 		{80F72357-C224-4BD9-AB2A-98BBFF9DA469}.Release|x64.ActiveCfg = Release|x64
 		{80F72357-C224-4BD9-AB2A-98BBFF9DA469}.Release|x64.Build.0 = Release|x64
+		{0866CDCB-5C00-45E5-8956-BF3C389EBE88}.Debug|x64.ActiveCfg = Debug|x64
+		{0866CDCB-5C00-45E5-8956-BF3C389EBE88}.Debug|x64.Build.0 = Debug|x64
+		{0866CDCB-5C00-45E5-8956-BF3C389EBE88}.Release|x64.ActiveCfg = Release|x64
+		{0866CDCB-5C00-45E5-8956-BF3C389EBE88}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
