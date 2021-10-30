@@ -10,6 +10,12 @@
     <ClInclude Include="TMathValue.h">
       <Filter>Templates</Filter>
     </ClInclude>
+    <ClInclude Include="TDimensionObject.h">
+      <Filter>Templates</Filter>
+    </ClInclude>
+    <ClInclude Include="FPoint3.h">
+      <Filter>Types</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
@@ -21,5 +27,13 @@
     <Filter Include="Interfaces">
       <UniqueIdentifier>{a2125815-adae-427c-ab62-0b22938614bd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Types">
+      <UniqueIdentifier>{a6a5326c-5913-4d83-8fe0-9abd323e83a1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FPoint3.cpp">
+      <Filter>Types</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
