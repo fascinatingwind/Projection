@@ -90,7 +90,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="dllexport.h" />
-    <ClInclude Include="MathValue.h" />
+    <ClInclude Include="TMathValue.h" />
     <ClInclude Include="precompiled.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

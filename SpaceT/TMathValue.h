@@ -6,14 +6,14 @@ namespace SpaceT
 	// Template class with math operation for inner calculus system
 	// It may be fnumber : public MathValue<float>
 	template<class T>
-	class SpaceT_ExportDll MathValue
+	class SpaceT_ExportDll TMathValue
 	{
 	public:
-		MathValue() = default;
-		~MathValue() = default;
+		TMathValue() = default;
+		~TMathValue() = default;
 
 		// Initializer.
-		MathValue(T value) : m_value(T)
+		TMathValue(T value) : m_value(T)
 		{
 		}
 
