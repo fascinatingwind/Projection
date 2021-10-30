@@ -1,17 +1,16 @@
 #include "KramerProjectionSolver.h"
-#include "FMatrix3x3.h"
-#include "Matrix3DHelper.h"
+
 
 namespace SpaceX
 {
 	FPoint3D KramerProjectionSolver::CalculateProjection(const FLine3D& line,
 		const FPoint3D& point) const
 	{
-		const auto matrix_representation = Matrix3DHelper::GetMatrixRepresentation(line);
+		const auto matrix_representation = GetMatrixRepresentation(line);
 		
 		// Get part of SLE
 		// if lineAsPlanes have zero row
-		const auto lineAsPlanes = Matrix3DHelper::Get2NonZeroRows(matrix_representation);
+		const auto lineAsPlanes = Get2NonZeroRows(matrix_representation);
 		
 		const auto normal = line.GetNormal();
 		const auto pointA = line.GetStartPoint();
@@ -42,5 +41,33 @@ namespace SpaceX
 		const auto detZM = temp_matrix.Determinant();
 
 		return FPoint3D(detXM / detM, detYM / detM, detZM / detM);
+	}
+	
+	FMatrix3x3 KramerProjectionSolver::GetMatrixRepresentation(const FLine3D& line) const
+	{
+		const auto revert = line.GetStartPoint() - line.GetEndPoint();
+		const auto normal = line.GetNormal();
+		return FMatrix3x3(
+			FPoint3D(normal.Y, revert.X, 0),
+			FPoint3D(normal.Z, 0, revert.X),
+			FPoint3D(0, normal.Z, normal.Y)
+		);
+	}
+	
+	std::array<FPoint3D, 2> KramerProjectionSolver::Get2NonZeroRows(const FMatrix3x3& matrix) const
+	{
+		std::array<FPoint3D, 2> result = { FPoint3D(), FPoint3D() };
+		int step = 0;
+		for (int row = 0; row < FMatrix3x3::GetDimension(); row++)
+		{
+			if (!matrix.IsZeroRow(row))
+			{
+				result[step] = matrix.GetRow(row);
+				step++;
+				if (step == 2)
+					break;
+			}
+		}
+		return result;
 	}
 }

@@ -25,9 +25,6 @@
     <ClInclude Include="LambdaParameter.h">
       <Filter>Algorithms</Filter>
     </ClInclude>
-    <ClInclude Include="Matrix3DHelper.h">
-      <Filter>Helpers</Filter>
-    </ClInclude>
     <ClInclude Include="SolutionStore.h">
       <Filter>Types</Filter>
     </ClInclude>
@@ -67,9 +64,6 @@
     </ClCompile>
     <ClCompile Include="LambdaParameter.cpp">
       <Filter>Algorithms</Filter>
-    </ClCompile>
-    <ClCompile Include="Matrix3DHelper.cpp">
-      <Filter>Helpers</Filter>
     </ClCompile>
     <ClCompile Include="ProjectionFinder.cpp">
       <Filter>Algorithms</Filter>
