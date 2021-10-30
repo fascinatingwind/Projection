@@ -90,13 +90,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="dllexport.h" />
-    <ClInclude Include="FPoint3.h" />
     <ClInclude Include="TDimensionObject.h" />
     <ClInclude Include="TMathValue.h" />
     <ClInclude Include="precompiled.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="FPoint3.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

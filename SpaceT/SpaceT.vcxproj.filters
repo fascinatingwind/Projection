@@ -13,9 +13,6 @@
     <ClInclude Include="TDimensionObject.h">
       <Filter>Templates</Filter>
     </ClInclude>
-    <ClInclude Include="FPoint3.h">
-      <Filter>Types</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
@@ -30,10 +27,5 @@
     <Filter Include="Types">
       <UniqueIdentifier>{a6a5326c-5913-4d83-8fe0-9abd323e83a1}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="FPoint3.cpp">
-      <Filter>Types</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>
