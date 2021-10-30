@@ -10,10 +10,11 @@ namespace SpaceT
 	{
 	public:
 		TMathValue() = default;
-		~TMathValue() = default;
+		virtual ~TMathValue() = default;
 
 		// Initializer.
-		TMathValue(T value) : m_value(T)
+		TMathValue(T value) 
+			: m_value(value)
 		{
 		}
 
@@ -21,6 +22,12 @@ namespace SpaceT
 		bool operator==(const T& other) const
 		{
 			return m_value == other;
+		}
+
+		// Compare values.
+		bool operator!=(const T& other) const
+		{
+			return m_value != other;
 		}
 
 		// Return sum of two values.
@@ -33,6 +40,13 @@ namespace SpaceT
 		T& operator+=(const T& other)
 		{
 			m_value += other;
+			return *this;
+		}
+		
+		// Return decrement value by another one.
+		T& operator-=(const T& other)
+		{
+			m_value -= other;
 			return *this;
 		}
 
