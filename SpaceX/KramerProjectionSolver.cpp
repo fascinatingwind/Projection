@@ -7,7 +7,7 @@
 namespace SpaceX
 {
 	FPoint3D KramerProjectionSolver::CalculateProjection(const FLine3D& line,
-		const FPoint3D& point) const
+		const FPoint3D& point) 
 	{
 		const auto matrix_representation = GetMatrixRepresentation(line);
 		
@@ -49,7 +49,7 @@ namespace SpaceX
 		return FPoint3D(detXM / detM, detYM / detM, detZM / detM);
 	}
 	
-	FMatrix3x3 KramerProjectionSolver::GetMatrixRepresentation(const FLine3D& line) const
+	FMatrix3x3 KramerProjectionSolver::GetMatrixRepresentation(const FLine3D& line)
 	{
 		const auto revert = line.GetStartPoint() - line.GetEndPoint();
 		const auto normal = line.GetNormal();
@@ -60,11 +60,11 @@ namespace SpaceX
 		);
 	}
 	
-	std::array<FPoint3D, 2> KramerProjectionSolver::Get2NonZeroRows(const FMatrix3x3& matrix) const
+	std::array<FPoint3D, 2> KramerProjectionSolver::Get2NonZeroRows(const FMatrix3x3& matrix)
 	{
 		std::array<FPoint3D, 2> result = { FPoint3D(), FPoint3D() };
-		int step = 0;
-		for (int row = 0; row < FMatrix3x3::GetDimension(); row++)
+		size_t step = 0;
+		for (size_t row = 0; row < FMatrix3x3::GetDimension(); row++)
 		{
 			if (!matrix.IsZeroRow(row))
 			{
