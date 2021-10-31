@@ -12,8 +12,7 @@ namespace SpaceX
         const FLine3D& line, const FPoint3D& input_point)
     {
         SolutionStore store;
-        KramerProjectionSolver solver;
-        store.m_projection = solver.CalculateProjection(line, input_point);
+        store.m_projection = KramerProjectionSolver::CalculateProjection(line, input_point);
         store.m_lambda_parameter = LambdaParameter::CalculateLambda(line, store.m_projection);
         const auto distance = store.m_projection - input_point;
         store.m_length_projection_segment = std::sqrt((distance * distance).Sum());
@@ -71,7 +70,7 @@ namespace SpaceX
         lines.reserve(poly_line.size() - 1);
 
         // init lines
-        for (int i = 1; i < poly_line.size(); i++)
+        for (size_t i = 1; i < poly_line.size(); i++)
         {
             lines.push_back(FLine3D(poly_line[i - 1], poly_line[i]));
         }
