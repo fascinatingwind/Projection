@@ -3,8 +3,6 @@
 #include <fstream>
 #include <iostream>
 
-#include "StringSplitter.h"
-
 namespace Utility
 {
 	FileReader::FileReader(const std::string& name)

@@ -11,7 +11,6 @@ namespace Utility
 		~StringSplitter() = delete;
 
 		// Returns substrings of original string separated by a string delimiter
-		// Delimiter by default is space 
 		static std::vector<std::string> Split(const std::string& str, const std::string& delim = " ");
 	};
 }

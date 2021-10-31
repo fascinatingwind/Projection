@@ -4,7 +4,6 @@
 namespace Utility
 {
 	// Read file by file name.
-	// Use RAII technique.
 	class Utility_ExportDll FileReader
 	{
 	public:

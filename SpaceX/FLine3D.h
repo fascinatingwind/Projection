@@ -9,9 +9,6 @@ namespace SpaceX
 	class SpaceX_ExportDll FLine3D
 	{
 	public:
-		FLine3D() = default;
-		~FLine3D() = default;
-		
 		// Initialize constructor.
 		FLine3D(const FPoint3D& point1, const FPoint3D& point2);
 		
@@ -23,7 +20,7 @@ namespace SpaceX
 		// Return point2
 		FPoint3D GetEndPoint() const;
 
-	protected:
+	private:
 		constexpr static size_t size = 2;
 		std::array<FPoint3D, size> m_points;
 	};

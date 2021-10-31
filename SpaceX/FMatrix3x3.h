@@ -9,8 +9,6 @@ namespace SpaceX
 	class SpaceX_ExportDll FMatrix3x3
 	{
 	public:
-		FMatrix3x3() = default;
-		~FMatrix3x3() = default;
 
 		explicit FMatrix3x3(
 			const FPoint3D& row0, 

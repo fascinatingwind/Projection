@@ -10,6 +10,9 @@ namespace Projection
 	{
 		const auto lines = StringConverter::ConvertAll(StringSplitter::Split(string));
 		assert(lines.size() == 3);
+		if (lines.size() != 3)
+			return FPoint3D();
+		
 		return FPoint3D( lines[0], lines[1], lines[2]);
 	}
 
