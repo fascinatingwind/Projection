@@ -1,8 +1,6 @@
 #pragma once
 #include "dllexport.h"
 
-#include <sstream>
-
 namespace Utility
 {
 	// Use for parsing string to other types like int, float, etc.

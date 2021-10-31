@@ -1,5 +1,8 @@
 #include "KramerProjectionSolver.h"
 
+#include <stdexcept>
+
+#include "NumericComparer.h"
 
 namespace SpaceX
 {
@@ -18,16 +21,19 @@ namespace SpaceX
 		const FMatrix3x3 matrixM(
 			lineAsPlanes.front(),
 			lineAsPlanes.back(),
-			FPoint3D(normal.X, normal.Y, normal.Z));
+			FPoint3D(normal.X(), normal.Y(), normal.Z()));
 
 		const FPoint3D pointP(
-			pointA.X * normal.Y - pointA.Y * normal.X,
-			pointA.X * normal.Z - pointA.Z * normal.X,
-			point.X * normal.X + point.Y * normal.Y + point.Z * normal.Z
+			pointA.X() * normal.Y() - pointA.Y() * normal.X(),
+			pointA.X() * normal.Z() - pointA.Z() * normal.X(),
+			point.X() * normal.X() + point.Y() * normal.Y() + point.Z() * normal.Z()
 		);
 
 		const auto detM = matrixM.Determinant();
-
+		if (NumericComparer::IsEqual(detM, 0.f))
+		{
+			throw std::runtime_error("Devide by zero exception.");
+		}
 		FMatrix3x3 temp_matrix = matrixM;
 		temp_matrix.SetColumn(pointP, 0);
 		const auto detXM = temp_matrix.Determinant();
@@ -48,9 +54,9 @@ namespace SpaceX
 		const auto revert = line.GetStartPoint() - line.GetEndPoint();
 		const auto normal = line.GetNormal();
 		return FMatrix3x3(
-			FPoint3D(normal.Y, revert.X, 0),
-			FPoint3D(normal.Z, 0, revert.X),
-			FPoint3D(0, normal.Z, normal.Y)
+			FPoint3D(normal.Y(), revert.X(), 0),
+			FPoint3D(normal.Z(), 0, revert.X()),
+			FPoint3D(0, normal.Z(), normal.Y())
 		);
 	}
 	

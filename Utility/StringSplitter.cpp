@@ -2,7 +2,8 @@
 
 namespace Utility
 {
-    std::vector<std::string> StringSplitter::Split(const std::string& str, const std::string& delim) {
+    std::vector<std::string> StringSplitter::Split(const std::string& str, const std::string& delim) 
+    {
         std::vector<std::string> lines;
         std::size_t current, previous = 0;
         current = str.find_first_of(delim);

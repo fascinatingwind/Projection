@@ -4,17 +4,22 @@
 namespace SpaceX
 {
 	// Point in 3d space using float type
-	struct SpaceX_ExportDll FPoint3D
+	class SpaceX_ExportDll FPoint3D
 	{
-		float X;
-		float Y;
-		float Z;
+		float m_X;
+		float m_Y;
+		float m_Z;
 
+	public:
 		FPoint3D() = default;
 		~FPoint3D() = default;
 		
 		// Initialize constructor.
 		explicit FPoint3D(float x, float y, float z);
+
+		float X() const;
+		float Y() const;
+		float Z() const;
 
 		// Comparing points.
 		bool operator==(const FPoint3D& other) const;

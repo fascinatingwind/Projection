@@ -5,52 +5,70 @@
 namespace SpaceX
 {
 	FPoint3D::FPoint3D(float x, float y, float z)
-		: X(x), Y(y), Z(z)
+		: m_X(x), m_Y(y), m_Z(z)
 	{
+	}
+
+	float FPoint3D::X() const
+	{
+		return m_X;
+	}
+
+	float FPoint3D::Y() const
+	{
+		return m_Y;
+	}
+
+	float FPoint3D::Z() const
+	{
+		return m_Z;
 	}
 
 	bool FPoint3D::operator==(const FPoint3D& other) const
 	{
-		return NumericComparer::IsEqual(X, other.X)
-			&& NumericComparer::IsEqual(Y, other.Y)
-			&& NumericComparer::IsEqual(Z, other.Z);
+		return NumericComparer::IsEqual(m_X, other.m_X)
+			&& NumericComparer::IsEqual(m_Y, other.m_Y)
+			&& NumericComparer::IsEqual(m_Z, other.m_Z);
 	}
 	FPoint3D& FPoint3D::operator+=(const FPoint3D& other)
 	{
-		X += other.X;
-		Y += other.Y;
-		Z += other.Z;
+		m_X += other.m_X;
+		m_Y += other.m_Y;
+		m_Z += other.m_Z;
 
 		return *this;
 	}
 
 	FPoint3D FPoint3D::operator+(const FPoint3D& other) const
 	{
-		return FPoint3D(X + other.X, Y + other.Y, Z + other.Z);
+		return FPoint3D(m_X + other.m_X, m_Y + other.m_Y, m_Z + other.m_Z);
 	}
 	FPoint3D FPoint3D::operator-(const FPoint3D& other) const
 	{
-		return FPoint3D(X - other.X, Y - other.Y, Z - other.Z);
+		return FPoint3D(m_X - other.m_X, m_Y - other.m_Y, m_Z - other.m_Z);
 	}
 
 	FPoint3D FPoint3D::operator-() const
 	{
-		return FPoint3D(-X, -Y, -Z);
+		return FPoint3D(-m_X, -m_Y, -m_Z);
 	}
 
 	FPoint3D FPoint3D::operator*(const FPoint3D& other) const
 	{
-		return FPoint3D(X * other.X, Y * other.Y, Z * other.Z);
+		return FPoint3D(m_X * other.m_X, m_Y * other.m_Y, m_Z * other.m_Z);
 	}
 
 	float FPoint3D::Sum() const
 	{
-		return X + Y + Z;
+		return m_X + m_Y + m_Z;
 	}
 
 	bool FPoint3D::operator<(const FPoint3D& other) const
 	{
-		return X < other.X && Y < other.Y && Z < other.Z;
+		return m_X < other.m_X 
+			|| (NumericComparer::IsEqual(m_X, other.m_X) && m_Y < other.m_Y)
+			|| (NumericComparer::IsEqual(m_X, other.m_X) 
+				&& NumericComparer::IsEqual(m_Y, other.m_Y) && m_Z < other.m_Z);
 	}
 
 	bool FPoint3D::operator>(const FPoint3D& other) const

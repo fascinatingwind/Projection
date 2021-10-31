@@ -18,9 +18,9 @@ namespace Projection
 			<< solution.m_lambda_parameter
 			<< " point "
 			// for fix negative zero output
-			<< solution.m_projection.X + 0.f << " "
-			<< solution.m_projection.Y + 0.f<< " "
-			<< solution.m_projection.Z + 0.f<< " "
+			<< solution.m_projection.X() + 0.f << " "
+			<< solution.m_projection.Y() + 0.f << " "
+			<< solution.m_projection.Z() + 0.f << " "
 			<< std::endl;
 	}
 }
