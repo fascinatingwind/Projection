@@ -1,4 +1,6 @@
 #pragma once
+#ifndef KRAMER_PROJECTION_SOLVER_H
+#define KRAMER_PROJECTION_SOLVER_H
 
 #include "dllexport.h"
 
@@ -26,3 +28,5 @@ namespace SpaceX
 		static std::array<FPoint3D, 2> Get2NonZeroRows(const FMatrix3x3& matrix);
 	};
 }
+
+#endif // !KRAMER_PROJECTION_SOLVER_H

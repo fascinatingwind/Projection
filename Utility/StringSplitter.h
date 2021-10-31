@@ -1,4 +1,7 @@
 #pragma once
+#ifndef STRING_SPLITTER_H
+#define STRING_SPLITTER_H
+
 #include "dllexport.h"
 
 namespace Utility
@@ -14,3 +17,5 @@ namespace Utility
 		static std::vector<std::string> Split(const std::string& str, const std::string& delim = " ");
 	};
 }
+
+#endif // !STRING_SPLITTER_H

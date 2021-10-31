@@ -1,4 +1,7 @@
 #pragma once
+#ifndef LAMBDA_PARAMETER_H
+#define LAMBDA_PARAMETER_H
+
 #include "dllexport.h"
 
 #include "FLine3D.h"
@@ -17,3 +20,4 @@ namespace SpaceX
 		static float CalculateLambda(const FLine3D& line, const FPoint3D& projection_point);
 	};
 }
+#endif // !LAMBDA_PARAMETER_H

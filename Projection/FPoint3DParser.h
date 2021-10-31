@@ -1,4 +1,6 @@
 #pragma once
+#ifndef FPOINT3D_PARSER_H
+#define FPOINT3D_PARSER_H
 
 #include "FPoint3D.h"
 
@@ -19,3 +21,5 @@ namespace Projection
 		static std::vector<FPoint3D> GetPoints(const std::vector<std::string>& string);
 	};
 }
+
+#endif // !FPOINT3D_PARSER_H

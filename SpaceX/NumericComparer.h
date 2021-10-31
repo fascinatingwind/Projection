@@ -1,4 +1,7 @@
 #pragma once
+#ifndef NUMERIC_COMPARER_H
+#define NUMERIC_COMPARER_H
+
 #include "dllexport.h"
 
 namespace SpaceX
@@ -26,3 +29,5 @@ namespace SpaceX
 		static bool IsLess(float a, float b, float epsilon = 1e-7);
 	};
 }
+
+#endif // !NUMERIC_COMPARER_H

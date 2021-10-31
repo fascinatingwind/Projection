@@ -1,4 +1,7 @@
 #pragma once
+#ifndef PROJECTION_FINDER_H
+#define PROJECTION_FINDER_H
+
 #include "dllexport.h"
 
 #include "FPoint3D.h"
@@ -28,3 +31,5 @@ namespace SpaceX
 
 	};
 }
+
+#endif // !PROJECTION_FINDER_H

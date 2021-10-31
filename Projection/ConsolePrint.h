@@ -1,4 +1,6 @@
 #pragma once
+#ifndef CONSOLE_PRINT_H
+#define CONSOLE_PRINT_H
 
 #include "SolutionStore.h"
 
@@ -20,3 +22,5 @@ namespace Projection
 		static void PrintResults(const SolutionStore& solution);
 	};
 }
+
+#endif // !CONSOLE_PRINT_H

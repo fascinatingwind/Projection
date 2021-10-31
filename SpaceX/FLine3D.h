@@ -1,4 +1,7 @@
 #pragma once
+#ifndef FLINE3D_H
+#define FLINE3D_H
+
 #include "dllexport.h"
 
 #include "FPoint3D.h"
@@ -25,3 +28,5 @@ namespace SpaceX
 		std::array<FPoint3D, size> m_points;
 	};
 }
+
+#endif // !FLINE3D_H

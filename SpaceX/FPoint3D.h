@@ -1,4 +1,7 @@
 #pragma once
+#ifndef FPOINT3D_H
+#define FPOINT3D_H
+
 #include "dllexport.h"
 
 namespace SpaceX
@@ -49,3 +52,5 @@ namespace SpaceX
 		float Sum() const;
 	};
 }
+
+#endif // !FPOINT3D_H

@@ -1,4 +1,7 @@
 #pragma once
+#ifndef FILE_READER_H
+#define FILE_READER_H
+
 #include "dllexport.h"
 
 namespace Utility
@@ -18,3 +21,5 @@ namespace Utility
 		std::vector<std::string> m_lines;
 	};
 }
+
+#endif // !FILE_READER_H

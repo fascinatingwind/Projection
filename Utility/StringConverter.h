@@ -1,4 +1,7 @@
 #pragma once
+#ifndef STRING_CONVERTER_H
+#define STRING_CONVERTER_H
+
 #include "dllexport.h"
 
 namespace Utility
@@ -17,3 +20,5 @@ namespace Utility
 		static std::vector<float> ConvertAll(const std::vector<std::string>& lines);
 	};
 }
+
+#endif // !STRING_CONVERTER_H

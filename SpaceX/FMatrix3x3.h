@@ -1,4 +1,7 @@
 #pragma once
+#ifndef FMATRIX3X3_H
+#define FMATRIX3X3_H
+
 #include "dllexport.h"
 
 #include "FPoint3D.h"
@@ -41,3 +44,5 @@ namespace SpaceX
 		std::array<std::array<float, m_dimension>, m_dimension> m_array;
 	};
 }
+
+#endif // !FMATRIX3X3_H
