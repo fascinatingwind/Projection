@@ -18,7 +18,7 @@ namespace SpaceX
 		// Find projection point using Kramer's method for solve SLE
 		FPoint3D CalculateProjection(const FLine3D& line, const FPoint3D& point) const;
 	
-	protected:
+	private:
 		// Return matrix representation of line in 3d space
 		FMatrix3x3 GetMatrixRepresentation(const FLine3D& line) const;
 		

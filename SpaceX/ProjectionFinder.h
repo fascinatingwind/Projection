@@ -13,11 +13,7 @@ namespace SpaceX
 	public:
 		ProjectionFinder() = delete;
 		~ProjectionFinder() = delete;
-
-		// Returns the projection point of a line segment.
-		static SolutionStore FindNearPointProjection(
-			const FLine3D& line, const FPoint3D& input_point);
-
+	
 		// Returns all projection points of a poly line
 		static std::list<SolutionStore> FindNearPointsProjection(
 			const std::vector<FPoint3D>& poly_line, const FPoint3D& input_point);
@@ -25,5 +21,10 @@ namespace SpaceX
 	private:
 		// Build line from neighboring points
 		static std::vector<FLine3D> GetLinesFromVectorPoints(const std::vector<FPoint3D>& poly_line);
+
+		// Returns the projection point of a line segment.
+		static SolutionStore FindNearPointProjection(
+			const FLine3D& line, const FPoint3D& input_point);
+
 	};
 }
