@@ -8,7 +8,7 @@ Take 2 non zero rows
 Create System Level Equation look like [M] = [P]
 ![Formula matrix M](svg/SLE.svg)
 
-found determinant of M\
+find determinant of M\
 replace 1st column of M from point P find det of Mx\
 replace 2st column of M from point P find det of My\
 replace 3st column of M from point P find det of Mz
