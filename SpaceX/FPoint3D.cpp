@@ -63,6 +63,13 @@ namespace SpaceX
 		return m_X + m_Y + m_Z;
 	}
 
+	std::string FPoint3D::ToString() const
+	{
+		return "(" + std::to_string(m_X + 0.f)
+			+ ", " + std::to_string(m_Y + 0.f)
+			+ ", " + std::to_string(m_Z + 0.f) + ")";
+	}
+
 	bool FPoint3D::operator<(const FPoint3D& other) const
 	{
 		return m_X < other.m_X 

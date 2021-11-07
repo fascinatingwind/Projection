@@ -50,6 +50,8 @@ namespace SpaceX
 
 		// Return sum of coordinates
 		float Sum() const;
+		
+		std::string ToString() const;
 	};
 }
 
