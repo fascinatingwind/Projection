@@ -1,9 +1,16 @@
 #include "FLine3D.h"
+#include <stdexcept>
 
 namespace SpaceX
 {
 	FLine3D::FLine3D(const FPoint3D& point1, const FPoint3D& point2)
 	{
+		if (point1 == point2)
+		{
+			throw std::runtime_error("Points for line is equal = "
+				+ point1.ToString() + " and " + point2.ToString());
+		}
+
 		m_points.front() = point1;
 		m_points.back() = point2;
 	}

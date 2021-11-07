@@ -1,6 +1,7 @@
 #include "ProjectionFinder.h"
 
 #include <cmath>
+#include <iostream>
 
 #include "KramerProjectionSolver.h"
 #include "LambdaParameter.h"
@@ -72,7 +73,15 @@ namespace SpaceX
         // init lines
         for (size_t i = 1; i < poly_line.size(); i++)
         {
-            lines.push_back(FLine3D(poly_line[i - 1], poly_line[i]));
+            try
+            {
+                FLine3D line(poly_line[i - 1], poly_line[i]);
+                lines.push_back(line);
+            }
+            catch (const std::runtime_error& ex)
+            {
+                std::cout << ex.what() << std::endl;
+            }
         }
         return lines;
     }
